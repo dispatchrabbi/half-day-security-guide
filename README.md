@@ -19,12 +19,3 @@ TK
 ## Contributing
 
 TK
-
-## TODO
-
-- [ ] Copy the TODO list over to Issues
-- [ ] Copy over the text of the guide into Markdown files in src/
-- [ ] Figure out footnotes
-- [ ] Write the layout/template bits to MVP
-- [ ] Write the generation code
-- [ ] Set up Github Pages hosting
