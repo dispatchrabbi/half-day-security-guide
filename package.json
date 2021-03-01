@@ -1,0 +1,35 @@
+{
+  "name": "half-day-security-guide",
+  "version": "1.0.0",
+  "description": "Got half a day and nothing to do? Level up your electronic privacy!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "node ./index.js",
+    "clean": "rm -rf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dispatchrabbi/half-day-security-guide.git"
+  },
+  "contributors": [
+    "Eli Morris-Heft (https://github.com/dispatchrabbi)",
+    "Bex Fortin"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dispatchrabbi/half-day-security-guide/issues"
+  },
+  "homepage": "https://github.com/dispatchrabbi/half-day-security-guide#readme",
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "mdast-util-toc": "^5.1.0",
+    "rehype-stringify": "^8.0.0",
+    "remark-parse": "^9.0.0",
+    "remark-rehype": "^8.0.0",
+    "remark-slug": "^6.0.0",
+    "unified": "^9.2.1"
+  }
+}
