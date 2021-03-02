@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/dispatchrabbi/half-day-security-guide#readme",
   "dependencies": {
+    "copy": "^0.3.2",
     "handlebars": "^4.7.7",
     "mdast-util-toc": "^5.1.0",
     "rehype-stringify": "^8.0.0",
