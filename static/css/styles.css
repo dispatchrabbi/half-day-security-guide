@@ -1,0 +1,26 @@
+header {
+  margin: 10px;
+}
+
+header h1,
+header h2 {
+  text-align: center;
+}
+
+nav {
+  float: left;
+  width: 290px;
+}
+
+nav p {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+main {
+  margin-left: 300px;
+  margin-right: 100px;
+}
