@@ -1,15 +1,24 @@
 header {
-  margin: 10px;
+  margin: 25px;
 }
 
-header h1,
+header h1 {
+  text-align: center;
+  
+  font-size: 5rem;
+}
+
 header h2 {
   text-align: center;
+  
+  font-size: 1.75rem;
 }
 
 nav {
   float: left;
-  width: 290px;
+  width: 300px;
+  
+  padding-top: 50px;
 }
 
 nav p {
@@ -18,9 +27,19 @@ nav p {
 
 nav ul {
   list-style-type: none;
+  
+  padding-left: 1rem;
+}
+
+nav p > a {
+  font-size: 1.1rem;
+}
+
+nav li > a {
+  font-size: .9rem;
 }
 
 main {
-  margin-left: 300px;
+  margin-left: 325px;
   margin-right: 100px;
 }
