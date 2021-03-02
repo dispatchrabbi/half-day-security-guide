@@ -51,3 +51,10 @@ main h1 {
 main h2 {
   margin-left: 25px;
 }
+
+footer {
+  margin: 10px 325px;
+  
+  text-align: center;
+  font-size: .75rem;
+}
