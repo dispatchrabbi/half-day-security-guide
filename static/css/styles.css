@@ -43,3 +43,11 @@ main {
   margin-left: 325px;
   margin-right: 100px;
 }
+
+main h1 {
+  margin-left: 15px;
+}
+
+main h2 {
+  margin-left: 25px;
+}
