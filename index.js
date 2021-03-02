@@ -5,7 +5,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import { readFile, writeFile, mkdir } from 'fs/promises';
 
 import generate from './lib/generate.js';
-import { read } from 'fs';
+
+import { promisify } from 'util';
+import copy from 'copy';
 
 async function init() {
   try {
@@ -21,6 +23,9 @@ async function init() {
   const indexPage = await generate(srcText.toString(), indexTemplate.toString(), JSON.parse(infoJson.toString()));
 
   await writeFile(path.join(__dirname, 'dist/index.html'), indexPage, 'utf8');
+
+  // copy static files
+  await promisify(copy)(path.join(__dirname, 'static', '**'), path.join(__dirname, 'dist'));
 }
 
 init().catch(function(ex) {
