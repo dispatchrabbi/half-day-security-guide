@@ -373,5 +373,3 @@ Sometimes, in order to use an app, it'll ask you to sign into a social media acc
 
 # Conclusion
 We hope you found our recommendations helpful! Our goal is to make you feel more secure, and make sure you know how to safeguard your data. If there's something we missed, you have a question, or think this document needs an update, you can contact us at EMAIL. We think everyone should have some basic internet privacy literacy, and hope that this guide was a step in that direction for you.
-
-This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/). You are free to share and adapt this document so long as you give appropriate credit, link to the license, and do not use this document for commercial purposes.
