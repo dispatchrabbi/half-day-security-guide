@@ -11,10 +11,12 @@ import copy from 'copy';
 
 import sass from 'sass';
 
-async function copyStyles(styleFile, styleDest) {
+async function copyStyles(styleFile, destDir, styleDest) {
   const styles = sass.renderSync({ file: styleFile });
   
-  await writeFile(path.join(__dirname, styleDest), styles.css.toString(), 'utf8');
+  await mkdir(path.join(__dirname, destDir));
+  
+  await writeFile(path.join(__dirname, destDir, styleDest), styles.css.toString(), 'utf8');
 }
 
 async function init() {
@@ -33,7 +35,7 @@ async function init() {
 
   await writeFile(path.join(__dirname, 'dist/index.html'), indexPage, 'utf8');
   
-  copyStyles('src/styles/styles.scss', 'dist/css/styles.css');
+  copyStyles('src/styles/styles.scss', 'dist/css', 'styles.css');
   
   // copy static files
   await promisify(copy)(path.join(__dirname, 'static', '**'), path.join(__dirname, 'dist'));
