@@ -19,9 +19,9 @@ async function init() {
 
   const indexTemplate = await readFile(path.join(__dirname, 'layout/index.hbs'));
   const srcText = await readFile(path.join(__dirname, 'src/text.md'));
-  const footerHTML = await readFile(path.join(__dirname, 'src/footer.html'));
+  //const footerHTML = await readFile(path.join(__dirname, 'src/footer.html'));
   const infoJson = await readFile(path.join(__dirname, 'src/info.json'));
-  const indexPage = await generate(srcText.toString(), footerHTML.toString(), indexTemplate.toString(), JSON.parse(infoJson.toString()));
+  const indexPage = await generate(srcText.toString(), indexTemplate.toString(), JSON.parse(infoJson.toString()));
 
   await writeFile(path.join(__dirname, 'dist/index.html'), indexPage, 'utf8');
 
