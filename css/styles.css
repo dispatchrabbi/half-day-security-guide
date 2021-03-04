@@ -37,6 +37,12 @@ main {
 main h1, main h2 {
   margin-left: 25px;
 }
+main .footnotes {
+  font-size: 0.8rem;
+}
+main .footnotes hr {
+  margin-right: 225px;
+}
 
 footer {
   margin: 10px 325px;
