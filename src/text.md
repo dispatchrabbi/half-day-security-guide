@@ -28,50 +28,6 @@ Lastly, we are not responsible for any harm that comes to you, your devices, you
 
 Okay, that probably took a whole hour out of our afternoon, and we've got a lot to cover. Let's get going!
 
-# Checklist
-Use this checklist to follow along with the guide. We've made some choices for you in this checklist, but you can substitute other choices if you decide to after reading the guide.
-
-## Your passwords
-- Get 1Password or LastPass
-- Turn on 2FA wherever you can
-
-## Your network
-- Add a WPA3 or WPA2-AES password to your wi-fi network
-- Change your router's DNS servers to 1.1.1.1 and 1.0.0.1
-
-## Your laptops and desktops
-- Add a password to your login
-- Learn how to lock your computer
-- Clean up unused user accounts
-- Install pending OS updates
-- Uninstall anti-malware scanners
-- Set up automatic cloud backups with Backblaze or Carbonite
-- Turn on disk encryption
-
-## Your phones and tablets
-- Add a long numeric passcode to your lock screen
-- Change your device's name to something without your name in it
-- Install pending OS and app updates
-- Install and use Signal for messaging
-- Uninstall unused apps
-- Audit remaining app permissions
-- Remove old Bluetooth device pairings
-
-## Internet of Things (IoT)
-- Throw out your smart speakers
-- Review device privacy settings
-- Disconnect devices from the network if possible
-
-## Your browser
-- Switch to Firefox
-- Use DuckDuckGo for web searches
-- Install the Privacy Badger and HTTPS Everywhere extensions
-
-## Your services
-- Consolidate your services
-- Check Have I Been Pwned? for your accounts
-- Check your privacy settings in all your services
-
 # General practices for good security
 Before we talk about how to secure your devices — and by that, we mean your computer, tablet, and phone — it's worth pointing out some good habits that will make sure all your hard work is worth it. Everyone who uses technology and the internet will benefit from adopting these practices.
 
@@ -128,7 +84,7 @@ It's hard to remember a long, random, distinct password for every site though, a
 
 If you need to create a password that won't go in your password manager for some reason (like the main password for your password manager), pick the longest password you can remember (or that the site will allow). A good way to create a long, memorable password is to make up a sentence. Sentences are longer than passwords, make it easy to add numbers and punctuation if needed, and are easier for you to remember than a long string of random numbers, letters, and symbols.
 
-We strongly advise against password creation schemes, like using variations on the same password for each new site (for example,  "p@ssw0RdGoogle123 " for Google and  "p@ssw0RdPaypal123 " for PayPal, etc.). Schemes like this make it hard for you to change that password if you need to, and you'll be more vulnerable to credential stuffing. Always make your passwords unrelated to the site they're for and to each other.
+We strongly advise against password creation schemes, like using variations on the same password for each new site (for example,  `p@ssw0RdGoogle123 ` for Google and  `p@ssw0RdPaypal123 ` for PayPal, etc.). Schemes like this make it hard for you to change that password if you need to, and you'll be more vulnerable to credential stuffing. Always make your passwords unrelated to the site they're for and to each other.
 
 > ### One Step Further
 > Whatever your password strategy is, it's a good idea to make provisions for someone else being able to access your accounts in case of emergency or death. One option is to put important passwords and other account information in a physical lockbox or fire safe and give a friend or loved one a way to access its contents if necessary. Some password managers have features to allow emergency access to some or all of the passwords in your account.
@@ -250,7 +206,7 @@ You'll be shocked to learn that our first recommendation is to add a password to
 >
 > Note also, though, that the absence of biometric unlock can't prevent authorities from trying to break into your device or holding you in jail until you reveal the passcode. Because of this, the authors of this guide recommend using passwords over biometric methods wherever possible. It is worth reiterating, though, that the authors are not lawyers and this is not legal advice; if this may be an issue for you, please consult your own legal professional. Also, laws and the interpretations thereof change; this is current case law as of January 2021.
 
-  [^4]: See, e.g.: [Court rules against man who was forced to fingerprint-unlock his phone](https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/), [Virginia judge: Police can demand a suspect unlock a phone with a fingerprint](https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/), and [Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky](Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky).
+  [^4]: See, e.g.: [Court rules against man who was forced to fingerprint-unlock his phone](https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/), [Virginia judge: Police can demand a suspect unlock a phone with a fingerprint](https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/), and [Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky](https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky).
 
 ## Change your phone's name and limit who can see it
 Phones are usually pre-set to call themselves  "Jane's Phone " or something similar, based on how you first set it up. That name is then broadcast over Bluetooth and, if it's an iOS device, AirDrop, where other people's devices can see it. There's no need for strangers to find out your name just because they're nearby, so go into Bluetooth and Airdrop settings and change your phone's name to something less identifiable.

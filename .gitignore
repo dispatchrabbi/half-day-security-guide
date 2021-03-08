@@ -33,3 +33,6 @@ node_modules/
 
 # output of the static site generator
 dist
+
+# macOS WHY
+.DS_Store
