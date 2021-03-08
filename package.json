@@ -8,6 +8,7 @@
     "clean": "rm -rf ./dist",
     "prebuild": "npm run clean",
     "build": "node ./index.js",
+    "debug": "npm run clean ; node --inspect ./index.js",
     "watch": "npm-watch",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
