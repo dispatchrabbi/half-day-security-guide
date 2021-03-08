@@ -102,17 +102,38 @@ main {
   }
 
   blockquote {
-    // border: 1px solid $color-red-cool-70;
-    background: $color-red-cool-10v;
+    &.did-you-know {
+      background: $color-yellow-10v;
+      
+      h3 {
+        color: $color-yellow-80v;
+      }
+    }
+    
+    &.paranoia-alert {
+      background: $color-red-cool-10v;
+      
+      h3 {
+        color: $color-red-cool-80v;
+      }
+    }
+    
+    &.one-step-further {
+      background: $color-blue-cool-10v;
+      
+      h3 {
+        color: $color-blue-cool-80v;
+      }
+    }
+    
     padding: 1rem;
-    border-radius: .5rem;
+    border-radius: .75rem;
     font-size: .8rem;
     margin-left: 1rem;
     margin-right: 1rem;
 
     h3 {
       font-size: 1.2rem;
-      color: $color-red-cool-80v;
     }
 
     p:last-child {
