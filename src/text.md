@@ -300,13 +300,13 @@ Basically, you should consider each of these devices to be a tiny computer you d
 We know that this is a hard line to take, and it pulls hard for the security side of the security/convenience tradeoff. However, if a smart device makes a big quality-of-life difference for you, or if you've already got some in your home you're not willing to part with, then we've got a backup recommendation for you: do your research. Figure out what data the device collects and sends back to its manufacturer, and what policies that manufacturer makes about the data. Also be sure to install updates promptly and keep an eye out for changing data policies or company acquisitions. We also encourage you to implement the Three Dumb Routers setup described in the One Step Further section below. If you're going to have smart devices in your home, we'd rather you go about it as securely as possible.
 
 > ### One Step Further
-> If you absolutely want to have smart devices all over your home, you can mitigate the risk with a network configuration called the Three Dumb Routers network, which creates a Trusted Devices network and an IoT Devices network[^3dr]. The Trusted Devices network hosts your computers, phones, tablets, printers, and so on. The IoT Devices network is where you put your internet-connected fridges, smart TVs, color-changing light bulbs, smart speakers, and so on.
+> If you absolutely want to have smart devices all over your home, you can mitigate the risk with a network configuration called the Three Dumb Routers network, which creates a Trusted Devices network and an IoT Devices network[^5]. The Trusted Devices network hosts your computers, phones, tablets, printers, and so on. The IoT Devices network is where you put your internet-connected fridges, smart TVs, color-changing light bulbs, smart speakers, and so on.
 >
 > Because of the way routers work, it's difficult for a device on the IoT Devices network to see devices on the Trusted Computers network, so they have limited ability to cause problems. And because IoT devices are generally designed to be controlled from anywhere, you generally have no problem doing so from the Trusted Computers network.
 >
 > If you want to set it up, here's how you do it. Connect your first router directly to the internet via your modem. This router will provide internet to the two other routers in this setup, each of which will broadcast a different wi-fi network. No other devices will connect to it, so you can turn its wi-fi off. Next, connect your second router to the first and use it as your Trusted Computers network. Last, connect your third router to the first and use it as your IoT Devices network. Make sure its wi-fi name and password are different from the Trusted Computers network.
 
-  [^3dr]: See, e.g.: [Security Now! episode 545 "Three Dumb Routers"](https://www.grc.com/sn/sn-545.htm) and ["Three Dumb Routers" at PC Perspective](https://pcper.com/2016/08/steve-gibsons-three-router-solution-to-iot-insecurity/).
+  [^5]: See, e.g.: [Security Now! episode 545 "Three Dumb Routers"](https://www.grc.com/sn/sn-545.htm) and ["Three Dumb Routers" at PC Perspective](https://pcper.com/2016/08/steve-gibsons-three-router-solution-to-iot-insecurity/).
 
 ## Smart Speakers
 If you have a smart speaker, **throw it out**.
@@ -314,7 +314,7 @@ If you have a smart speaker, **throw it out**.
 Smart speakers like Alexa and Google Home sit in your house and can listen to everything you and your family say, then send those recordings back to Amazon and Google, where you have no control over who can listen to them or give them to someone else. Even with the privacy policies that accompany these devices, even with the quality-of-life improvement, *even* with the Three Dumb Router approach, we judge the potential tradeoffs to be too high. We judge it impossible to confidently and securely host a smart speaker in your house — so don't.
 
 ## Smart TVs, Set-Top Boxes, and Game Consoles
-Much like our recommendation for Internet of Things devices in general, the recommendation is to not buy a smart TV (though it's getting harder and harder to do this). Failing that, turn off the smart TV features and avoid connecting the TV to the internet at all if you can. Some smart TVs continually send fingerprints of the screen video back to the manufacturer[^5], so they can track you and send you ads. Much like smart speakers, the potential tradeoffs are too great to chance.
+Much like our recommendation for Internet of Things devices in general, the recommendation is to not buy a smart TV (though it's getting harder and harder to do this). Failing that, turn off the smart TV features and avoid connecting the TV to the internet at all if you can. Some smart TVs continually send fingerprints of the screen video back to the manufacturer[^6], so they can track you and send you ads. Much like smart speakers, the potential tradeoffs are too great to chance.
 
 If the TV requires an internet connection to set up (and you aren't using the Three Dumb Routers setup), use an Ethernet cable or temporarily change the password on your WiFi before connecting your TV to it. (Don't forget to change it back!) Then, once it's set up, turn the internet connection on your TV off.
 
@@ -323,7 +323,7 @@ Set-top boxes like Roku or Apple TV and game consoles like an Xbox or PlayStatio
 > ### One Step Further
 > If you want to watch YouTube and Netflix and all that good stuff on your TV without using a smart TV's features, you can set up a small computer (such as an Intel NUC or a Raspberry Pi) running a well-secured Linux HTPC distro. Do note that this is quite the rabbit hole, as there are a lot of options available in this space.
 
-  [^5]: See, e.g.: [Smart TVs like Samsung, LG and Roku are tracking everything we watch](https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/), [Some Smart TVs Watch What You Watch](https://www.consumerreports.org/cro/news/2015/02/samsung-lg-vizio-smart-tvs-watch-everything-you-watch/index.htm), and [In Defense of Dumb TVs](https://frame.work/blog/in-defense-of-dumb-tvs).
+  [^6]: See, e.g.: [Smart TVs like Samsung, LG and Roku are tracking everything we watch](https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/), [Some Smart TVs Watch What You Watch](https://www.consumerreports.org/cro/news/2015/02/samsung-lg-vizio-smart-tvs-watch-everything-you-watch/index.htm), and [In Defense of Dumb TVs](https://frame.work/blog/in-defense-of-dumb-tvs).
 
 # Browsing the internet
 
