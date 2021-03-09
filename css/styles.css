@@ -1,51 +1,154 @@
+/*
+----------------------------------------
+map-collect()
+----------------------------------------
+Collect multiple maps into a single
+large map
+source: https://gist.github.com/bigglesrocks/d75091700f8f2be5abfe
+----------------------------------------
+Taken from USWDS 2.10.2 (https://designsystem.digital.gov/).
+*/
+/*
+----------------------------------------
+smart-quote()
+----------------------------------------
+Quotes strings
+Inspects `px`, `xs`, and `xl` numbers
+Leaves bools as is
+----------------------------------------
+*/
+/*
+----------------------------------------
+map-deep-get()
+----------------------------------------
+@author Hugo Giraudel
+@access public
+@param {Map} $map - Map
+@param {Arglist} $keys - Key chain
+@return {*} - Desired value
+----------------------------------------
+*/
+/*
+----------------------------------------
+get-system-color()
+----------------------------------------
+Derive a system color from its
+family, value, and vivid or a passed
+variable that is, itself, a list
+----------------------------------------
+*/
+/*
+Taken from USWDS 2.10.2 (https://designsystem.digital.gov/).
+*/
+a {
+  color: #4866ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #222fbf;
+  text-decoration: underline;
+}
+
+code {
+  color: #d72d79;
+}
+
+body {
+  display: grid;
+  grid-template: "title title" auto "toc text" auto "footer footer" auto/2fr 10fr;
+  gap: 1.5em;
+  background-color: white;
+  color: black;
+}
+
 header {
-  margin: 25px;
-}
-header h1, header h2 {
-  text-align: center;
-}
-header h1 {
-  font-size: 5rem;
+  grid-area: title;
+  padding: 2em 2em 0 2em;
 }
 header h2 {
-  font-size: 1.75rem;
+  font-size: 1.2em;
+  color: #757575;
 }
 
 nav {
-  float: left;
-  width: 300px;
-  padding-top: 50px;
+  grid-area: toc;
+  padding: 0 0 0 2em;
 }
-nav p {
-  margin: 0;
+nav > #nav-scroll-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+nav h1 {
+  position: sticky;
+  top: 0;
+  padding: 0.5em 0;
+  background-color: white;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+nav > #nav-scroll-container > ul > li {
+  margin-bottom: 1em;
 }
 nav ul {
-  list-style-type: none;
-  padding-left: 1rem;
+  list-style: none;
+  padding-left: 0;
 }
-nav p > a {
-  font-size: 1.1rem;
+nav ul p {
+  margin: 0;
 }
-nav li > a {
-  font-size: 0.9rem;
+nav ul li {
+  padding: 0.1em;
+}
+nav ul ul li {
+  font-size: 0.8em;
+}
+nav a {
+  color: inherit;
+  text-decoration: none;
 }
 
 main {
-  margin-left: 325px;
-  margin-right: 100px;
+  grid-area: text;
+  max-width: 48em;
+  padding: 0 2em 0 0;
 }
-main h1, main h2 {
-  margin-left: 25px;
+main h1 {
+  font-size: 2rem;
 }
-main .footnotes {
+main h1:not(:first-child) {
+  margin-top: 3rem;
+}
+main h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+main blockquote {
+  background: #f8dfe2;
+  padding: 1rem;
+  border-radius: 0.5rem;
   font-size: 0.8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-main .footnotes hr {
-  margin-right: 225px;
+main blockquote h3 {
+  font-size: 1.2rem;
+  color: #4f1c24;
+}
+main blockquote p:last-child {
+  margin-bottom: 0;
+}
+main .footnotes .footnote-backref {
+  margin-left: 1ch;
 }
 
 footer {
-  margin: 10px 325px;
-  text-align: center;
-  font-size: 0.75rem;
+  grid-area: footer;
+  padding: 2em;
+  background-color: #d9e8f6;
+  font-size: 0.8rem;
+}
+footer p {
+  margin: 0;
 }
