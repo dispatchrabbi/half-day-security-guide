@@ -77,6 +77,11 @@ nav {
     }
   }
 
+  .current {
+    background-color: $color-blue-warm-10v;
+    color: $color-blue-warm-80v;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
