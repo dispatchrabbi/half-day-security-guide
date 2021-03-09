@@ -104,28 +104,28 @@ main {
   blockquote {
     &.did-you-know {
       background: $color-yellow-10v;
-      
+
       h3 {
         color: $color-yellow-80v;
       }
     }
-    
+
     &.paranoia-alert {
       background: $color-red-cool-10v;
-      
+
       h3 {
         color: $color-red-cool-80v;
       }
     }
-    
+
     &.one-step-further {
-      background: $color-blue-cool-10v;
-      
+      background: $color-mint-cool-10;
+
       h3 {
-        color: $color-blue-cool-80v;
+        color: $color-mint-cool-80;
       }
     }
-    
+
     padding: 1rem;
     border-radius: .75rem;
     font-size: .8rem;
