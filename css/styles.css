@@ -125,16 +125,32 @@ main h2 {
   margin-top: 2rem;
 }
 main blockquote {
-  background: #f8dfe2;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   font-size: 0.8rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
+main blockquote.did-you-know {
+  background: #fee685;
+}
+main blockquote.did-you-know h3 {
+  color: #422d19;
+}
+main blockquote.paranoia-alert {
+  background: #f8dfe2;
+}
+main blockquote.paranoia-alert h3 {
+  color: #4f1c24;
+}
+main blockquote.one-step-further {
+  background: #c4eeeb;
+}
+main blockquote.one-step-further h3 {
+  color: #203131;
+}
 main blockquote h3 {
   font-size: 1.2rem;
-  color: #4f1c24;
 }
 main blockquote p:last-child {
   margin-bottom: 0;

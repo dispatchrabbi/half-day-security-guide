@@ -7,7 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap-reboot.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css" />
-    <!-- page generated 2021-03-09T02:24:23.958Z -->
+    <!-- page generated 2021-03-09T04:08:00.208Z -->
   </head>
   <body>
     <header>
@@ -145,7 +145,7 @@ We'd like to acknowledge and thank Billy, Garrett, Kristin, and Sonia for being 
 <p>When it comes to your digital life, it's best to try to keep some sort of division between home and work . To a lesser extent, this can also apply to other parts of your life, like if you work with volunteer organizations. That said, it can be tricky to <em>completely</em> separate these areas, since most of us only have one phone.</p>
 <p>Ideally, if your work involves a computer, your employer provides you with one. If so, use it only for work-related things. Whether they choose to or not, your employer has the ability to monitor everything that happens on the computer they provided for you. (You may have even signed an acknowledgement of this — check your employee handbook.) Avoid signing into your personal email, your social media accounts, or even your password manager on your work computer. Doing so allows your employer to see your personal life and, depending on how draconian your company's IT setup is, this may even allow them to discover your passwords.</p>
 <p>If you need to sign up for an online service in order to do your job (like Dropbox or Office 365), use your work email address instead of your personal email address, and don't reuse your personal account for work. However, one possible exception to this is your employer's HR software, since you may need to access it to request a sick day from home or to access personal records like your W-2 after leaving your employer.</p>
-<blockquote>
+<blockquote class="did-you-know">
 <h3 id="did-you-know">Did You Know?</h3>
 <p>Doing personal work or side projects on a device owned by your company may give the company a claim on the intellectual property rights for that work. Similarly, doing company work on a personal device makes it much more murky as to where each party's rights begin and end. However, this guide is about security, not copyright law, and the authors are not lawyers, so we're just going to leave it at: as much as you can, keep work on company-owned machines, and keep personal stuff on personal machines.</p>
 </blockquote>
@@ -168,7 +168,7 @@ We'd like to acknowledge and thank Billy, Garrett, Kristin, and Sonia for being 
 <p>It's hard to remember a long, random, distinct password for every site though, and that's why you should use a password manager. We'll cover this in the next section.</p>
 <p>If you need to create a password that won't go in your password manager for some reason (like the main password for your password manager), pick the longest password you can remember (or that the site will allow). A good way to create a long, memorable password is to make up a sentence. Sentences are longer than passwords, make it easy to add numbers and punctuation if needed, and are easier for you to remember than a long string of random numbers, letters, and symbols.</p>
 <p>We strongly advise against password creation schemes, like using variations on the same password for each new site (for example, <code>p@ssw0RdGoogle123</code> for Google and <code>p@ssw0RdPaypal123</code> for PayPal, etc.). Schemes like this make it hard for you to change that password if you need to, and you'll be more vulnerable to credential stuffing. Always make your passwords unrelated to the site they're for and to each other.</p>
-<blockquote>
+<blockquote class="one-step-further">
 <h3 id="one-step-further">One Step Further</h3>
 <p>Whatever your password strategy is, it's a good idea to make provisions for someone else being able to access your accounts in case of emergency or death. One option is to put important passwords and other account information in a physical lockbox or fire safe and give a friend or loved one a way to access its contents if necessary. Some password managers have features to allow emergency access to some or all of the passwords in your account.</p>
 </blockquote>
@@ -177,7 +177,7 @@ We'd like to acknowledge and thank Billy, Garrett, Kristin, and Sonia for being 
 <p>A password manager stores all of your passwords behind a single main password, encrypted so that no one can access your passwords without your main password, even if they steal your laptop or hack the company that makes the password manager. Password managers also have built-in password generators, which make it easy to change your existing passwords to something long and random, or create a good, unique password to a new account.</p>
 <p>You don't have to start by putting every one of your passwords in immediately. Add your passwords to your password manager as you log into things (this a lot easier if you use your password manager's browser extension) and, after a few weeks, the majority of your passwords will have been added.</p>
 <p>Some password managers will alert you if you have the same password for multiple sites, or if your username was found in a breach. If you get these alerts, change your password for those sites to something new and randomly-generated.</p>
-<blockquote>
+<blockquote class="paranoia-alert">
 <h3 id="paranoia-alert">Paranoia Alert!</h3>
 <p>There are a few passwords you should memorize and maybe even keep out of your password manager. For example, you should always know the password to your main email address and the passwords to log in to your devices.</p>
 </blockquote>
@@ -187,7 +187,7 @@ We'd like to acknowledge and thank Billy, Garrett, Kristin, and Sonia for being 
 <p>If you have an ATM card, you're already using 2FA: the card is something you <em>have</em>, and your PIN is something you <em>know</em>. If your house has an alarm, that's 2FA too: you <em>have</em> your key, and you <em>know</em> your alarm code. In fact, something you <em>know</em> plus something you <em>have</em> is the most common form of 2FA. For online accounts, the thing you <em>know</em> will be your password, and the thing you <em>have</em> will be your phone, where you'll get a code either from an authenticator app or a text message and enter it after you've entered your password.</p>
 <p>When setting up 2FA, if you have the choice, we recommend using an authenticator app over text messages (but if you can only choose text messages, that's fine too). The system used by authenticator apps for 2FA is a standard, so any of the major authenticator apps will work here: LastPass, 1Password, Google, Microsoft, and Authy all make compatible apps, and Aegis gets a bonus point for being open source. Pick one and use it for all of your 2FA-enabled services.</p>
 <p>You'll also get a list of recovery codes when you set up 2FA. You won't be able to access them again later, so keep them safe and in a place where you can get to them without needing to log into an account that might require a recovery code. Storing printed copies in a safe is another good option.</p>
-<blockquote>
+<blockquote class="one-step-further">
 <h3 id="one-step-further-1">One Step Further</h3>
 <p>A <a href="https://www.yubico.com/">YubiKey</a> is a hardware security token that is a more secure version of the system that uses authenticator apps. (There are other hardware security token manufacturers, but YubiKey is the big one.) If you work in a sensitive industry like journalism, consider getting a YubiKey to use for your second factor. However, be aware that support for hardware security tokens is not as widespread as for authenticator apps or SMS-based 2FA.</p>
 <p>Hardware security tokens also have the drawback that there's no way to replace a lost token, and some models — though not Yubikeys — have expiration dates. If you lose yours (or it expires) and you don't have the recovery codes, you'll lose all your access and cannot get it back. Because of this, we recommend buying two tokens in your first order, setting them both up, and putting one in a secure location as a backup. In any case, if you're thinking about using hardware tokens, get familiar with how they work and read up before diving in.</p>
@@ -205,18 +205,18 @@ As noted above, your workplace may use SSO for signing into services provided by
 <p>Your wi-fi network should be secured with WPA3 or WPA2 (AES, not TKIP) security and a good password. (If your router has both 2.4GHz and 5GHz networks, it's okay to use the same password for both.) A sentence works well as a password for your wi-fi; it's long, easy to share with guests, and difficult to guess. If your router does not support WPA2 encryption, buy a new router — WPA2 has been mandatory on all new wi-fi devices since 2006, and wi-fi passwords on networks using WEP and WPA (the precursors to WPA2/3) are crackable in minutes with common hardware.</p>
 <p>You'll need to log into your router's admin panel to make these changes. (You can find out how to do this in your router's manual.) If you didn't change the password for the admin panel from the default when you were first setting up the router, now is a good time to change it. Don't make it the same password as the network password.</p>
 <p>While you're changing settings, turn off Wi-Fi Protected Setup (WPS) and Universal Plug-n-Play (UPnP). WPS is a feature that is meant to allow devices to automatically join wi-fi networks, and UPnP is a protocol that allows some devices (such as game consoles) to make themselves contactable from outside your network without any setup. However, both have security flaws that are hard to fix and defend against, so it's safer to just not allow your network to use them in the first place.</p>
-<blockquote>
+<blockquote class="one-step-further">
 <h3 id="one-step-further-2">One Step Further</h3>
 <p>Check to see if there's a new version of your router's firmware and install it. These updates usually include security and bug fixes. Installing new firmware incorrectly can brick your router, so make sure you read the manual's instructions before your start. If you take this step, remember to periodically check for updates in the future as well.</p>
 </blockquote>
 <h2 id="change-your-dns-server">Change your DNS server</h2>
 <p>DNS is the phonebook of the internet. When you text your friend, your phone looks up their phone number in its contact list and sends your message to that number, not the person's name. Similarly, when you put a URL in your browser's address bar, your computer actually needs an IP address to connect to, so it asks a DNS server to look up the IP address for that URL. The URL is like your friend's name, and the IP address is like their phone number. If your DNS server logs your activity (and many ISPs' DNS servers do), it has a pretty good record of every website you've visited.</p>
 <p>You can change your DNS server in your router's settings, which will change it for every device using your network. There are a bunch of privacy-focused DNS servers out there, and you can see a list at <a href="https://www.privacytools.io/providers/dns/">https://www.privacytools.io/providers/dns/</a>. We recommend Cloudflare for reliability (and because the IP addresses are easy to remember: 1.1.1.1 and 1.0.0.1), but any of the options on that list are good.</p>
-<blockquote>
+<blockquote class="one-step-further">
 <h3 id="one-step-further-3">One Step Further</h3>
 <p><a href="https://pi-hole.net/">Pi-hole</a> is DNS software that you install on a small computer called a Raspberry Pi (or any other server you have laying around) and hook up to your network. It acts as your network's DNS server and blocks DNS requests to common tracking domains, effectively blocking tracking for any computer on your network — which has the nice side effect of blocking a lot of ads too. Pi-hole also lets you use DNS over HTTPS, which protects your DNS inquiries from being eavesdropped on. With a premade kit, a little research, and a weekend, setting up a Pi-hole is a good project for anyone looking to boost their techie skills and the privacy of their network.</p>
 </blockquote>
-<blockquote>
+<blockquote class="one-step-further">
 <h3 id="one-step-further-4">One Step Further</h3>
 <p>When you make a DNS request, the request is sent unencrypted and could be eavesdropped on by third parties. You can protect against this by using DNS over HTTPS (DoH), DNS over TLS (DoT), or DNScrypt. While support for DoH is coming soon to Windows 10 and macOS 14, you can use it now if you have a Pi-hole or if you browse with Firefox (as is our recommendation — see below).</p>
 </blockquote>
@@ -238,7 +238,7 @@ As noted above, your workplace may use SSO for signing into services provided by
 <p>It's worth noting that third party anti-malware software can sometimes get in the way of the built-in scanner and cause false positives. If you have Norton Antivirus or something else installed on your computer, we recommend uninstalling it and depending on the built-in scanners instead.</p>
 <h2 id="set-up-cloud-backups">Set up cloud backups</h2>
 <p>Consider your data backup situation — what is your plan in case your computer crashes or gets water spilled on it? A good backup situation needs to be more than "I move data to an external disk every once in a while"; it needs to happen on a regular basis and, preferably, automatically. It's also best if the backups are offsite, so a cloud backup service is a good choice. We have used Carbonite and Backblaze for offsite backup, and recommend them. If you're on macOS, iCloud offers a remote backup service, which is convenient but we're not wild about it — we think it's a better choice to use a service that exclusively focuses on backups.</p>
-<blockquote>
+<blockquote class="one-step-further">
 <h3 id="one-step-further-5">One Step Further</h3>
 <p>If you want to go further, the best advice for backups is called <a href="https://www.backblaze.com/blog/the-3-2-1-backup-strategy/">the "3-2-1 strategy"</a>: 3 copies of your data, in 2 devices, with 1 offsite. In general, this means you'd have the data stored on your computer, your convenient onsite backup drive, and an offsite, automatic backup.</p>
 </blockquote>
@@ -248,7 +248,7 @@ As noted above, your workplace may use SSO for signing into services provided by
 <p>Now let's look at your Android or iOS mobile devices. If you're using a device with some other OS, the same principles apply, but the details may be different.</p>
 <h2 id="add-a-long-lock-screen-passcode">Add a long lock screen passcode</h2>
 <p>You'll be shocked to learn that our first recommendation is to add a password to your device! As usual, longer is better, but especially on phones, passwords can be difficult to type. Both Android and iOS have the ability to configure numeric passcodes of any length you choose so you get the security of a longer code with the ease of entry of fewer, larger buttons. On Android, this is the "PIN" screen lock. (We don't recommend using the "Pattern" unlock, as it's too easy for someone to learn your code by looking over your shoulder.<sup id="fnref-3"><a href="#fn-3" class="footnote-ref">3</a></sup>) On iOS, you'll need to choose the "Custom Alphanumeric Code" option when setting a new passcode. This will let you set a passcode using both letters and numbers, but if you only use numbers for your code, iOS will present the numeric keypad when you want to unlock your device instead of the full keyboard.</p>
-<blockquote>
+<blockquote class="paranoia-alert">
 <h3 id="paranoia-alert-1">Paranoia Alert!</h3>
 <p>Biometric authentication (via fingerprint, face, or iris recognition) can be very convenient! But there may be a <em>legal</em> difference between these methods of unlocking your device and a passcode or password. In the United States of America, the Fifth Amendment to the Constitution protects you from being forced to reveal self-incriminating information. Most jurisdictions in the US consider forcing you to reveal your passcode to be self-incrimination, but allow forcing you to operate a biometric unlock. The analogy is, broadly, that if you were searched and a key to a safe was found, the authorities can use the key to unlock it; if that safe required a combination to unlock, they cannot force you to tell them the combination.<sup id="fnref-4"><a href="#fn-4" class="footnote-ref">4</a></sup></p>
 <p>Note also, though, that the absence of biometric unlock can't prevent authorities from trying to break into your device or holding you in jail until you reveal the passcode. Because of this, the authors of this guide recommend using passwords over biometric methods wherever possible. It is worth reiterating, though, that the authors are not lawyers and this is not legal advice; if this may be an issue for you, please consult your own legal professional. Also, laws and the interpretations thereof change; this is current case law as of January 2021.</p>
@@ -281,7 +281,7 @@ As noted above, your workplace may use SSO for signing into services provided by
 <p>Many of these IoT devices also have vague or confusing privacy controls, if any exist at all. And many of these device manufacturers are new, small companies whose business plan is explicitly to get bought by a larger company like Google, Amazon, or Microsoft, at which point any previous guarantees about your data privacy go out the window.</p>
 <p>Basically, you should consider each of these devices to be a tiny computer you don't have control over and can't update, hanging out on the same network your laptop and phone are on. <strong>Therefore, our blanket recommendation is: avoid buying smart devices.</strong></p>
 <p>We know that this is a hard line to take, and it pulls hard for the security side of the security/convenience tradeoff. However, if a smart device makes a big quality-of-life difference for you, or if you've already got some in your home you're not willing to part with, then we've got a backup recommendation for you: do your research. Figure out what data the device collects and sends back to its manufacturer, and what policies that manufacturer makes about the data. Also be sure to install updates promptly and keep an eye out for changing data policies or company acquisitions. We also encourage you to implement the Three Dumb Routers setup described in the One Step Further section below. If you're going to have smart devices in your home, we'd rather you go about it as securely as possible.</p>
-<blockquote>
+<blockquote class="one-step-further">
 <h3 id="one-step-further-6">One Step Further</h3>
 <p>If you absolutely want to have smart devices all over your home, you can mitigate the risk with a network configuration called the Three Dumb Routers network, which creates a Trusted Devices network and an IoT Devices network. The Trusted Devices network hosts your computers, phones, tablets, printers, and so on. The IoT Devices network is where you put your internet-connected fridges, smart TVs, color-changing light bulbs, smart speakers, and so on.</p>
 <p>Because of the way routers work, it's difficult for a device on the IoT Devices network to see devices on the Trusted Computers network, so they have limited ability to cause problems. And because IoT devices are generally designed to be controlled from anywhere, you generally have no problem doing so from the Trusted Computers network.</p>
@@ -294,7 +294,7 @@ As noted above, your workplace may use SSO for signing into services provided by
 <p>Much like our recommendation for Internet of Things devices in general, the recommendation is to not buy a smart TV (though it's getting harder and harder to do this). Failing that, turn off the smart TV features and avoid connecting the TV to the internet at all if you can. Some smart TVs continually send fingerprints of the screen video back to the manufacturer<sup id="fnref-5"><a href="#fn-5" class="footnote-ref">5</a></sup>, so they can track you and send you ads. Much like smart speakers, the potential tradeoffs are too great to chance.</p>
 <p>If the TV requires an internet connection to set up (and you aren't using the Three Dumb Routers setup), use an Ethernet cable or temporarily change the password on your WiFi before connecting your TV to it. (Don't forget to change it back!) Then, once it's set up, turn the internet connection on your TV off.</p>
 <p>Set-top boxes like Roku or Apple TV and game consoles like an Xbox or PlayStation are generally more trustworthy than the smart TV itself, or at least mean you don't have to throw the whole TV out if you decide later that you don't want the privacy risk.</p>
-<blockquote>
+<blockquote class="one-step-further">
 <h3 id="one-step-further-7">One Step Further</h3>
 <p>If you want to watch YouTube and Netflix and all that good stuff on your TV without using a smart TV's features, you can set up a small computer (such as an Intel NUC or a Raspberry Pi) running a well-secured Linux HTPC distro. Do note that this is quite the rabbit hole, as there are a lot of options available in this space.</p>
 </blockquote>
@@ -320,7 +320,7 @@ As noted above, your workplace may use SSO for signing into services provided by
 <h2 id="check-the-url-before-entering-sensitive-information">Check the URL before entering sensitive information</h2>
 <p>Whenever you're about to put in sensitive information like a password, credit card number, social security number, etc., check the URL of the page you're about to type it into and make sure it's correct. The most important thing to look at is the domain (the part that usually ends in ".com") and make sure it is what you expect for the company or service that the page claims to be. Some modern browsers will highlight the domain to make this easier for you.</p>
 <p>Another thing to check for is that the site is using HTTPS. Though some browsers will show a padlock or put "Secure" next to the URL when a site is using HTTPS, the best way to check for HTTPS is to look for "https://" at the start of the URL — though you may need to click the address bar to make the browser display it. This is extra important if you clicked on the link in an email or text message. (Because let's be real: you <em>know</em> you're not supposed to click links in emails or text messages, but you're going to anyway. So do what you can to keep it rare and be extra cautious when you do so.)</p>
-<blockquote>
+<blockquote class="paranoia-alert">
 <h3 id="paranoia-alert-2">Paranoia Alert!</h3>
 <p>Consider using multiple browsers and/or Firefox's <a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/">Browser Containers</a> extension. The ways that web trackers (including Google and Facebook) track you are restricted to the browser, so if you visit Facebook in Edge and then go to a site with a Facebook tracker in Firefox, it's harder to link those sessions together. Having multiple browsers also allows you to install different extensions; one author uses their password manager in Firefox only, so they can't accidentally log into websites in other browsers. Bonus paranoia points if your password manager is not in your default browser, as then links you click in emails will open in the default browser and you'll have to think before you log in.</p>
 <p>Browser Containers provide much of this benefit within Firefox itself and also allow you to log into multiple accounts at the same site at the same time. However, neither of these strategies is perfect, as both browsers and all containers will be coming from the same IP address. Some linking may still be possible.</p>
@@ -329,7 +329,7 @@ As noted above, your workplace may use SSO for signing into services provided by
 <h2 id="check-for-breaches">Check for breaches</h2>
 <p>Security breaches that leak credentials and personal information are more frequent than most of us realize, and even leaks from sites you have never visited can contain your personal information, due to tracking and sharing data. If you never have, it's worth checking if your email address or common usernames have been found in a breach. (They almost certainly have.)</p>
 <p>The best way to do this is to use <a href="https://haveibeenpwned.com/">Have I Been Pwned</a>, a site run by well-known security researcher Troy Hunt that is a reliable source of information about breaches. Go to HIBP and search for your email address and usernames. You'll get a list of breaches that your email address or username was found in; for each service listed, sign in and change your password (which will be super easy because you have a password manager, right?), and check the recent activity to make sure it all looks legitimate.</p>
-<blockquote>
+<blockquote class="paranoia-alert">
 <h3 id="paranoia-alert-3">Paranoia Alert!</h3>
 <p>Consider using multiple email addresses for different sites. If you use a "public" email in general on the web, use a "private" email to log into your bank or other secure sites. This way if someone tries to guess your bank account credentials based on information from another site, they are even less likely to be correct.</p>
 </blockquote>
@@ -354,7 +354,7 @@ As noted above, your workplace may use SSO for signing into services provided by
 </div></main>
     <footer>
       <p class="license">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
-      <p>This guide was last updated on 27 February 2021. Generated 2021-03-09T02:24:23.958Z.</p>
+      <p>This guide was last updated on 2021-02-27. Generated 2021-03-09T04:08:00.208Z.</p>
     </footer>
   </body>
 </html>
