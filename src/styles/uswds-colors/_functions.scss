@@ -1,0 +1,137 @@
+/*
+----------------------------------------
+map-collect()
+----------------------------------------
+Collect multiple maps into a single
+large map
+source: https://gist.github.com/bigglesrocks/d75091700f8f2be5abfe
+----------------------------------------
+Taken from USWDS 2.10.2 (https://designsystem.digital.gov/).
+*/
+
+@function map-collect($maps...) {
+  $collection: ();
+
+  @each $map in $maps {
+    $collection: map-merge($collection, $map);
+  }
+
+  @return $collection;
+}
+
+/*
+----------------------------------------
+smart-quote()
+----------------------------------------
+Quotes strings
+Inspects `px`, `xs`, and `xl` numbers
+Leaves bools as is
+----------------------------------------
+*/
+
+@function smart-quote($value) {
+  @if type-of($value) == "string" {
+    @return quote($value);
+  }
+
+  @if type-of($value) == "number" and index(("px", "xl", "xs"), unit($value)) {
+    @return inspect($value);
+  }
+
+  @if type-of($value) == "color" {
+    @error 'Only use quoted color tokens in USWDS functions and mixins. '
+      + 'See designsystem.digital.gov/design-tokens/color '
+      + 'for more information.';
+  }
+
+  @return $value;
+}
+
+/*
+----------------------------------------
+map-deep-get()
+----------------------------------------
+@author Hugo Giraudel
+@access public
+@param {Map} $map - Map
+@param {Arglist} $keys - Key chain
+@return {*} - Desired value
+----------------------------------------
+*/
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+/*
+----------------------------------------
+get-system-color()
+----------------------------------------
+Derive a system color from its
+family, value, and vivid or a passed
+variable that is, itself, a list
+----------------------------------------
+*/
+
+@function get-system-color(
+  $color-family: false,
+  $color-grade: false,
+  $color-variant: false
+) {
+  // If the arg being passed to the fn
+  // is a variable defined as a list,
+  // $color-family will contain this
+  // entire list, and needs to be
+  // unpacked.
+  // ex:
+  //    in settings:
+  //      $theme-color-primary.'dark': 'blue', 70
+  //    in the theme colors map:
+  //      $color-primary-dark: get-system-color($theme-color-primary.'dark'),
+
+  @if type-of($color-family) == "list" {
+    @if length($color-family) > 2 {
+      $color-variant: nth($color-family, 3);
+    }
+    $color-grade: nth($color-family, 2);
+    $color-family: nth($color-family, 1);
+  }
+
+  $color-family: smart-quote($color-family);
+  $color-variant: smart-quote($color-variant);
+
+  // If the arg being passed to the fn
+  // is false, it should output as `false`
+  // to preserve a false value in the
+  // target map
+  // ex:
+  //    in settings:
+  //      $theme-color-primary.'darkest': false;
+  //    in the theme colors map:
+  //      'darkest': get-system-color($theme-color-primary.'darkest'),
+  //      'darkest': false, // is the desired outcome
+  // TODO: should a false-pass color function be a separate fn?
+
+  @if not $color-family {
+    @return false;
+  }
+
+  @if $color-variant {
+    $output: map-deep-get(
+      $system-colors,
+      $color-family,
+      $color-variant,
+      $color-grade
+    );
+
+    @return $output;
+  }
+
+  $output: map-deep-get($system-colors, $color-family, $color-grade);
+
+  @return $output;
+}

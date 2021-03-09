@@ -5,10 +5,17 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "clean": "rm -rf ./dist",
     "prebuild": "npm run clean",
     "build": "node ./index.js",
-    "clean": "rm -rf ./dist",
+    "watch": "npm-watch",
     "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "watch": {
+    "build": {
+      "patterns": ["src", "layout"],
+      "extensions": "*"
+    }
   },
   "repository": {
     "type": "git",
@@ -34,5 +41,8 @@
     "remark-slug": "^6.0.0",
     "sass": "^1.32.8",
     "unified": "^9.2.1"
+  },
+  "devDependencies": {
+    "npm-watch": "^0.7.0"
   }
 }
