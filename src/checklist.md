@@ -2,7 +2,7 @@
 Use this checklist to follow along with the guide. We've made some choices for you in this checklist, but you can substitute other choices if you decide to after reading the guide.
 
 ## Your passwords
-- Get 1Password or LastPass
+- Get 1Password or BitWarden
 - Turn on 2FA wherever you can
 
 ## Your network

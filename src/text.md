@@ -70,7 +70,7 @@ Throughout this guide, we recommend various services and recommend against using
 
 For example, we recommend using Firefox and not using Chrome. Why? Firefox is made by Mozilla, and Mozilla's main business is making browsers. Chrome is made by Google, and Google's main business is selling ads.
 
-We also recommend using a dedicated password manager and not using the one built into your browser. Why? Because password managers like 1Password and LastPass are built by companies that are focused on making the best password manager they can; the password storage in your browser is built by a team that's focused on making a good browser.
+We also recommend using a dedicated password manager and not using the one built into your browser. Why? Because password managers like 1Password and BitWarden are built by companies that are focused on making the best password manager they can; the password storage in your browser is built by a team that's focused on making a good browser.
 
 This isn't to say that Chrome is a badly-made browser or that the password manager in Firefox is insecure, but given the choice, we think it's wiser to use services made by specialists rather than ones made as a side gig. This also means we often recommend a service that is paid over one that's free. Free is an attractive feature in a service, no doubt, but every service costs money to run. If it's free to you, ask yourself: who's paying for it? Oftentimes, if you're not the customer, your data is the product, and that's exactly what we're trying to protect you from in this guide.
 
@@ -90,7 +90,7 @@ We strongly advise against password creation schemes, like using variations on t
 > Whatever your password strategy is, it's a good idea to make provisions for someone else being able to access your accounts in case of emergency or death. One option is to put important passwords and other account information in a physical lockbox or fire safe and give a friend or loved one a way to access its contents if necessary. Some password managers have features to allow emergency access to some or all of the passwords in your account.
 
 ## Get a password manager, and transition all your passwords onto it
-Sign up for a password manager, use it to store all your passwords, and make sure all your passwords are unique and randomly generated. We use and recommend 1Password or LastPass, and we also trust BitWarden and KeePass. However, **do not use the password-saving functionality in your browser**, which doesn't work the same way a password manager does.
+Sign up for a password manager, use it to store all your passwords, and make sure all your passwords are unique and randomly generated. We use and recommend 1Password, and we also trust BitWarden, LastPass, and KeePass. However, **do not use the password-saving functionality in your browser**, which doesn't work the same way a password manager does.
 
 A password manager stores all of your passwords behind a single main password, encrypted so that no one can access your passwords without your main password, even if they steal your laptop or hack the company that makes the password manager. Password managers also have built-in password generators, which make it easy to change your existing passwords to something long and random, or create a good, unique password to a new account.
 
