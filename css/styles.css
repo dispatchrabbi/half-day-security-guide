@@ -55,7 +55,7 @@ code {
 
 body {
   display: grid;
-  grid-template: "title title" auto "toc text" auto "footer footer" auto/2fr 10fr;
+  grid-template: "title title" auto "toc text" auto "footer footer" auto/1fr 3fr;
   gap: 1.5em;
   background-color: white;
   color: black;
@@ -72,7 +72,7 @@ header h2 {
 
 nav {
   grid-area: toc;
-  padding: 0 0 0 2em;
+  padding: 0 0 0 1.75em;
 }
 nav > #nav-scroll-container {
   position: sticky;
@@ -83,7 +83,8 @@ nav > #nav-scroll-container {
 nav h1 {
   position: sticky;
   top: 0;
-  padding: 0.5em 0;
+  padding: 0.5em 0 0.5em 0.25em;
+  margin: 0;
   background-color: white;
   font-size: 1.2em;
   text-transform: uppercase;
@@ -97,12 +98,18 @@ nav ul {
 }
 nav ul p {
   margin: 0;
-}
-nav ul li {
-  padding: 0.1em;
+  font-weight: bold;
 }
 nav ul ul li {
   font-size: 0.8em;
+}
+nav li > p, nav li > ul > li {
+  padding: 0.25rem;
+}
+nav li > p.current, nav li > ul > li.current {
+  background-color: #d4e5ff;
+  color: #162e51;
+  border-radius: 0.25rem;
 }
 nav a {
   color: inherit;
