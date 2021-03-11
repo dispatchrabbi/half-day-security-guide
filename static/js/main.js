@@ -25,7 +25,6 @@ function findCurrentSection(htmlEl, mainEl) {
 
   // 3. walk back through siblings until we find an h1 or h2
   while(!['h1', 'h2'].includes(targetEl.nodeName.toLowerCase())) {
-    console.log({ targetEl: targetEl.nodeName });
     targetEl = targetEl.previousElementSibling;
   }
 
