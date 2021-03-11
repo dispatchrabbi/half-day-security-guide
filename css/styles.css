@@ -41,7 +41,7 @@ variable that is, itself, a list
 Taken from USWDS 2.10.2 (https://designsystem.digital.gov/).
 */
 a {
-  color: #4866ff;
+  color: #3e4ded;
   text-decoration: none;
 }
 a:hover {
@@ -57,6 +57,8 @@ body {
   display: grid;
   grid-template: "title title" auto "toc text" auto "footer footer" auto/1fr 3fr;
   gap: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   background-color: white;
   color: black;
 }
@@ -64,6 +66,9 @@ body {
 header {
   grid-area: title;
   padding: 2em 2em 0 2em;
+}
+header h1 {
+  font-weight: 600;
 }
 header h2 {
   font-size: 1.2em;
@@ -87,7 +92,9 @@ nav h1 {
   margin: 0;
   background-color: white;
   font-size: 1.2em;
-  text-transform: uppercase;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-variant: small-caps;
 }
 nav > #nav-scroll-container > ul > li {
   margin-bottom: 1em;
@@ -98,13 +105,13 @@ nav ul {
 }
 nav ul p {
   margin: 0;
-  font-weight: bold;
+  font-weight: 400;
 }
 nav ul ul li {
   font-size: 0.8em;
 }
 nav li > p, nav li > ul > li {
-  padding: 0.25rem;
+  padding: 0.1rem 0.25rem;
 }
 nav li > p.current, nav li > ul > li.current {
   background-color: #d4e5ff;
@@ -133,25 +140,29 @@ main h2 {
 }
 main blockquote {
   padding: 1rem;
+  border: 2px solid black;
   border-radius: 0.75rem;
   font-size: 0.8rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 main blockquote.did-you-know {
-  background: #fee685;
+  background: #f5e6af;
+  border-color: #ddaa01;
 }
 main blockquote.did-you-know h3 {
   color: #422d19;
 }
 main blockquote.paranoia-alert {
   background: #f8dfe2;
+  border-color: #e52207;
 }
 main blockquote.paranoia-alert h3 {
   color: #4f1c24;
 }
 main blockquote.one-step-further {
   background: #c4eeeb;
+  border-color: #1dc2ae;
 }
 main blockquote.one-step-further h3 {
   color: #203131;
