@@ -173,9 +173,19 @@ main {
     }
   }
   
-  .footnotes .footnote-backref {
-    margin-left: .5ch;
-    padding-right: 4px;
+  .footnotes {
+    .footnote-backref {
+      margin-left: .5ch;
+      padding-right: 4px;
+    }
+    
+    p {
+      margin: 0;
+    }
+    
+    ul li {
+      list-style: disclosure-closed;
+    }
   }
 }
 

@@ -205,11 +205,18 @@ You'll be shocked to learn that our first recommendation is to add a password to
   [^3]: [Why you should never use pattern passwords on your phone](https://www.wired.co.uk/article/phone-lock-screen-password)
 
 > ### Paranoia Alert!
-> Biometric authentication (via fingerprint, face, or iris recognition) can be very convenient! But there may be a *legal* difference between these methods of unlocking your device and a passcode or password. In the United States of America, the Fifth Amendment to the Constitution protects you from being forced to reveal self-incriminating information. Most jurisdictions in the US consider forcing you to reveal your passcode to be self-incrimination, but allow forcing you to operate a biometric unlock. The analogy is, broadly, that if you were searched and a key to a safe was found, the authorities can use the key to unlock it; if that safe required a combination to unlock, they cannot force you to tell them the combination.[^4]
+> Biometric authentication (via fingerprint, face, or iris recognition) can be very convenient! But there may be a *legal* difference between these methods of unlocking your device and a passcode or password. In the United States of America, the Fifth Amendment to the Constitution protects you from being forced to reveal self-incriminating information. Most jurisdictions in the US consider forcing you to reveal your passcode to be self-incrimination, but allow forcing you to operate a biometric unlock. The analogy is, broadly, that if you were searched and a key to a safe was found, the authorities can use the key to unlock it; if that safe required a combination to unlock, they cannot force you to tell them the combination.[^fingerprints]
 >
 > Note also, though, that the absence of biometric unlock can't prevent authorities from trying to break into your device or holding you in jail until you reveal the passcode. Because of this, the authors of this guide recommend using passwords over biometric methods wherever possible. It is worth reiterating, though, that the authors are not lawyers and this is not legal advice; if this may be an issue for you, please consult your own legal professional. Also, laws and the interpretations thereof change; this is current case law as of January 2021.
 
-  [^4]: See, e.g.: [Court rules against man who was forced to fingerprint-unlock his phone](https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/), [Virginia judge: Police can demand a suspect unlock a phone with a fingerprint](https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/), and [Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky](https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky).
+  [^fingerprints]: See, e.g.: 
+    * [Court rules against man who was forced to fingerprint-unlock his phone][fp1-ars]
+    * [Virginia judge: Police can demand a suspect unlock a phone with a fingerprint][fp2-ars]
+    * [Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky][fp3-bio]
+
+  [fp1-ars]: https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/ "https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/"
+  [fp2-ars]: https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/ "https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/"
+  [fp3-bio]: https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky "https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky"
 
 ## Change your phone's name and limit who can see it
 Phones are usually pre-set to call themselves "Jane's Phone" or something similar, based on how you first set it up. That name is then broadcast over Bluetooth and, if it's an iOS device, AirDrop, where other people's devices can see it. There's no need for strangers to find out your name just because they're nearby, so go into Bluetooth and Airdrop settings and change your phone's name to something less identifiable.
@@ -265,7 +272,9 @@ We know that this is a hard line to take, and it pulls hard for the security sid
 >
 > If you want to set it up, here's how you do it. Connect your first router directly to the internet via your modem. This router will provide internet to the two other routers in this setup, each of which will broadcast a different wi-fi network. No other devices will connect to it, so you can turn its wi-fi off. Next, connect your second router to the first and use it as your Trusted Computers network. Last, connect your third router to the first and use it as your IoT Devices network. Make sure its wi-fi name and password are different from the Trusted Computers network.
 
-  [^3dr]: See, e.g.: [Security Now! episode 545 "Three Dumb Routers"](https://www.grc.com/sn/sn-545.htm) and ["Three Dumb Routers" at PC Perspective](https://pcper.com/2016/08/steve-gibsons-three-router-solution-to-iot-insecurity/).
+  [^3dr]: See, e.g.:
+    * [Security Now! episode 545 "Three Dumb Routers"](https://www.grc.com/sn/sn-545.htm)
+    * ["Three Dumb Routers" at PC Perspective](https://pcper.com/2016/08/steve-gibsons-three-router-solution-to-iot-insecurity/).
 
 ## Smart Speakers
 If you have a smart speaker, **throw it out**.
@@ -282,7 +291,10 @@ Set-top boxes like Roku or Apple TV and game consoles like an Xbox or PlayStatio
 > ### One Step Further
 > If you want to watch YouTube and Netflix and all that good stuff on your TV without using a smart TV's features, you can set up a small computer (such as an Intel NUC or a Raspberry Pi) running a well-secured Linux HTPC distro. Do note that this is quite the rabbit hole, as there are a lot of options available in this space.
 
-  [^5]: See, e.g.: [Smart TVs like Samsung, LG and Roku are tracking everything we watch](https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/), [Some Smart TVs Watch What You Watch](https://www.consumerreports.org/cro/news/2015/02/samsung-lg-vizio-smart-tvs-watch-everything-you-watch/index.htm), and [In Defense of Dumb TVs](https://frame.work/blog/in-defense-of-dumb-tvs).
+  [^5]: See, e.g.:
+    * [Smart TVs like Samsung, LG and Roku are tracking everything we watch](https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/)
+    * [Some Smart TVs Watch What You Watch](https://www.consumerreports.org/cro/news/2015/02/samsung-lg-vizio-smart-tvs-watch-everything-you-watch/index.htm)
+    * [In Defense of Dumb TVs](https://frame.work/blog/in-defense-of-dumb-tvs).
 
 # Browsing the internet
 
