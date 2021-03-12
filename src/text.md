@@ -3,6 +3,7 @@ This guide is a straightforward primer covering the basics of protecting your on
 
 ## Who wrote this?
 This guide is written by Bex Fortin and Eli Morris-Heft. Bex is a software developer; they've spent most of the last ten years writing enterprise software. Eli has also spent the last ten-plus years writing software, and has done IT for volunteer organizations. Both of us are tech hobbyists and maintain a keen interest in securing and protecting our digital lives.
+
 We'd like to acknowledge and thank Billy, Garrett, Kristin, and Sonia for being our beta readers. This guide is easier to read and follow, addresses more use cases, and is generally better in all ways thanks to their suggestions and insight.
 
 ## Who is this guide for?
@@ -70,9 +71,11 @@ Throughout this guide, we recommend various services and recommend against using
 
 For example, we recommend using Firefox and not using Chrome. Why? Firefox is made by Mozilla, and Mozilla's main business is making browsers. Chrome is made by Google, and Google's main business is selling ads.
 
-We also recommend using a dedicated password manager and not using the one built into your browser. Why? Because password managers like 1Password and BitWarden are built by companies that are focused on making the best password manager they can; the password storage in your browser is built by a team that's focused on making a good browser.
+We also recommend using a dedicated password manager and not using the one built into your browser. Why? Because password managers like 1Password and BitWarden are built by companies that are focused on making the best password manager they can, whereas the password storage in your browser is built by a team that's focused on making a good browser.
 
-This isn't to say that Chrome is a badly-made browser or that the password manager in Firefox is insecure, but given the choice, we think it's wiser to use services made by specialists rather than ones made as a side gig. This also means we often recommend a service that is paid over one that's free. Free is an attractive feature in a service, no doubt, but every service costs money to run. If it's free to you, ask yourself: who's paying for it? Oftentimes, if you're not the customer, your data is the product, and that's exactly what we're trying to protect you from in this guide.
+This isn't to say that Chrome is a badly-made browser or that the password manager in Firefox is insecure. But given the choice, we think it's wiser to use services made by specialists rather than ones made as a side gig. When a company is focused on a single kind of product, they'll fix bugs and security issues faster, and there's less of a chance that the service will go away without warning.
+
+This also means we often recommend a service that is paid over one that's free. Free is an attractive feature in a service, no doubt, but every service costs money to run. If it's free to you, ask yourself: who's paying for it? Oftentimes, if you're not the customer, your data is the product, and that's exactly what we're trying to protect you from in this guide.
 
 # Passwords
 Having long, strong passwords that are unique for each service is one of the best things you can do to level up the security of your online presence. Moreover, if you get your password game in shape, it'll be easier to do many of the other things in this guide. For those reasons, we're going to talk about passwords and other things related to signing into services first.
@@ -168,7 +171,7 @@ The easiest thing you can do to make your computer more secure is to make sure t
 
 When you set up your account's password, have a look at what other accounts are on your computer: if there are any accounts you don't remember setting up, or if the "guest account" option is on, consider whether you still need them, and disable or delete them if you do not. If anyone else regularly uses your computer, make them an account of their own.
 
-You should also set the computer to go to screensaver or to sleep after a short period of inactivity — say, 5-10 minutes — and get in the habit of locking the computer whenever you stand up or walk away. On Windows, locking is easy: just hit Windows + L. On the Mac, you can hit *Control + Shift + power button*[^1] or set a hot corner in the Screen Saver preferences. If you have a Mac with a Touch Bar, you should [add a lock button to the Touch Bar](https://support.apple.com/en-bn/guide/mac-help/mchl5a63b060/11.0/mac/11.0) instead and use that.
+You should also set the computer to go to screensaver or to sleep after a short period of inactivity — say, 5-10 minutes — and get in the habit of locking the computer whenever you stand up or walk away. On Windows, locking is easy: just hit *Windows + L*. On the Mac, you can hit *Control + Shift + power button*[^1] or set a hot corner in the Screen Saver preferences. If you have a Mac with a Touch Bar, you should [add a lock button to the Touch Bar](https://support.apple.com/en-bn/guide/mac-help/mchl5a63b060/11.0/mac/11.0) instead and use that.
 
   [^1]: On older Macs or external keyboards, use the Eject button; on Mac laptops with a Touch Bar, use the Touch ID button at the top right.
 
