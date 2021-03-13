@@ -4,20 +4,28 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 import { readFile, writeFile, mkdir } from 'fs/promises';
 
-import generate from './lib/generate.js';
+import generateGuide from './lib/generate.js';
 
 import { promisify } from 'util';
 import copy from 'copy';
 
 import sass from 'sass';
 
-async function copyStyles(styleFile, destDir, styleDest) {
+async function compileStyles(styleFile, destDir, styleDest) {
   // weirdly, renderSync is faster than render with Dart sass: https://sass-lang.com/documentation/js-api#fiber
   const styles = sass.renderSync({ file: styleFile });
 
   await mkdir(path.join(__dirname, destDir));
 
   await writeFile(path.join(__dirname, destDir, styleDest), styles.css.toString(), 'utf8');
+}
+
+async function buildGuide(infoJSON) {
+  const indexTemplate = await readFile(path.join(__dirname, 'layout/index.hbs'));
+  const srcText = await readFile(path.join(__dirname, 'src/text.md'));
+  const indexPage = await generateGuide(srcText.toString(), indexTemplate.toString(), infoJSON);
+
+  await writeFile(path.join(__dirname, 'dist/index.html'), indexPage, 'utf8');
 }
 
 async function init() {
@@ -28,15 +36,14 @@ async function init() {
     if(ex.code !== 'EEXIST' /* directory already exists */) { throw ex; }
   }
 
-  const indexTemplate = await readFile(path.join(__dirname, 'layout/index.hbs'));
-  const srcText = await readFile(path.join(__dirname, 'src/text.md'));
-  //const footerHTML = await readFile(path.join(__dirname, 'src/footer.html'));
-  const infoJson = await readFile(path.join(__dirname, 'src/info.json'));
-  const indexPage = await generate(srcText.toString(), indexTemplate.toString(), JSON.parse(infoJson.toString()));
+  const infoFile = await readFile(path.join(__dirname, 'src/info.json'));
+  const infoJSON = JSON.parse(infoFile.toString());
 
-  await writeFile(path.join(__dirname, 'dist/index.html'), indexPage, 'utf8');
+  // build the main page
+  await buildGuide(infoJSON);
 
-  await copyStyles('src/styles/styles.scss', 'dist/css', 'styles.css');
+  // compile scss into css
+  await compileStyles('src/styles/styles.scss', 'dist/css', 'styles.css');
 
   // copy static files
   await promisify(copy)(path.join(__dirname, 'static', '**'), path.join(__dirname, 'dist'));
