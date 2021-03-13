@@ -2,7 +2,7 @@
 
 Got half a day and nothing to do? Level up your electronic privacy!
 
-This is the code that powers the guide. Looking for the actual guide? Go to https://dispatchrabbi.github.io/half-day-security-guide/ (final link TBD).
+This is the code that powers the guide. Looking for the actual guide? Go to https://halfdaysecurity.guide!
 
 ## Structure
 
