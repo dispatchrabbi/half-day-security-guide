@@ -36,8 +36,14 @@ async function init() {
     if(ex.code !== 'EEXIST' /* directory already exists */) { throw ex; }
   }
 
+  // get the current date in ISO format to stamp the generated file
+  const generatedDate = new Date().toISOString();
+
   const infoFile = await readFile(path.join(__dirname, 'src/info.json'));
-  const infoJSON = JSON.parse(infoFile.toString());
+  const infoJSON = {
+    ...JSON.parse(infoFile.toString()),
+    generatedDate,
+  };
 
   // build the main page
   await buildGuide(infoJSON);
