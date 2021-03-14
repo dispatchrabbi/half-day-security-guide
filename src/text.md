@@ -209,7 +209,7 @@ You'll be shocked to learn that our first recommendation is to add a password to
 >
 > Note also, though, that the absence of biometric unlock can't prevent authorities from trying to break into your device or holding you in jail until you reveal the passcode. Because of this, the authors of this guide recommend using passwords over biometric methods wherever possible. It is worth reiterating, though, that the authors are not lawyers and this is not legal advice; if this may be an issue for you, please consult your own legal professional. Also, laws and the interpretations thereof change; this is current case law as of January 2021.
 
-  [^fingerprints]: See, e.g.: 
+  [^fingerprints]: See, e.g.:
     * [Court rules against man who was forced to fingerprint-unlock his phone][fp1-ars]
     * [Virginia judge: Police can demand a suspect unlock a phone with a fingerprint][fp2-ars]
     * [Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky][fp3-bio]
