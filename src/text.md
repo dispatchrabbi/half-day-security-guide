@@ -4,7 +4,7 @@ This guide is a straightforward primer covering the basics of protecting your on
 ## Who wrote this?
 This guide is written by Bex Fortin and Eli Morris-Heft. Bex is a software developer; they've spent most of the last ten years writing enterprise software. Eli has also spent the last ten-plus years writing software, and has done IT for volunteer organizations. Both of us are tech hobbyists and maintain a keen interest in securing and protecting our digital lives.
 
-We'd like to acknowledge and thank Billy, Garrett, Kristin, and Sonia for being our beta readers. This guide is easier to read and follow, addresses more use cases, and is generally better in all ways thanks to their suggestions and insight.
+We'd like to acknowledge and thank Billy, Garrett, Harold, Kristin, and Sonia for being our beta readers. This guide is easier to read and follow, addresses more use cases, and is generally better in all ways thanks to their suggestions and insight.
 
 ## Who is this guide for?
 This guide is designed for people who are familiar with how to use their computers, phones, and tablets but aren't necessarily super tech-savvy. **For the most part, we'll be installing or uninstalling software and changing settings,** so if you're comfortable doing that, you'll have no problem following along. When we can't give exact instructions for your situation, the specifics should be easily searchable on the internet, so you should also be comfortable doing that.
