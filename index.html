@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css" />
-    <!-- page generated 2021-03-13T20:54:14.002Z -->
+    <!-- page generated 2021-03-14T02:31:58.377Z -->
   </head>
   <body>
     <header>
@@ -287,7 +287,7 @@ As noted above, your workplace may use SSO for signing into services provided by
 <p>We know that this is a hard line to take, and it pulls hard for the security side of the security/convenience tradeoff. However, if a smart device makes a big quality-of-life difference for you, or if you’ve already got some in your home you’re not willing to part with, then we’ve got a backup recommendation for you: do your research. Figure out what data the device collects and sends back to its manufacturer, and what policies that manufacturer makes about the data. Also be sure to install updates promptly and keep an eye out for changing data policies or company acquisitions. We also encourage you to implement the Three Dumb Routers setup described in the One Step Further section below. If you’re going to have smart devices in your home, we’d rather you go about it as securely as possible.</p>
 <blockquote class="one-step-further">
 <h3 id="one-step-further-6">One Step Further</h3>
-<p>If you absolutely want to have smart devices all over your home, you can mitigate the risk with a network configuration called the Three Dumb Routers network, which creates a Trusted Devices network and an IoT Devices network. The Trusted Devices network hosts your computers, phones, tablets, printers, and so on. The IoT Devices network is where you put your internet-connected fridges, smart TVs, color-changing light bulbs, smart speakers, and so on.</p>
+<p>If you absolutely want to have smart devices all over your home, you can mitigate the risk with a network configuration called the Three Dumb Routers network, which creates a Trusted Devices network and an IoT Devices network.<sup id="fnref-5"><a href="#fn-5" class="footnote-ref">5</a></sup> The Trusted Devices network hosts your computers, phones, tablets, printers, and so on. The IoT Devices network is where you put your internet-connected fridges, smart TVs, color-changing light bulbs, smart speakers, and so on.</p>
 <p>Because of the way routers work, it’s difficult for a device on the IoT Devices network to see devices on the Trusted Computers network, so they have limited ability to cause problems. And because IoT devices are generally designed to be controlled from anywhere, you generally have no problem doing so from the Trusted Computers network.</p>
 <p>If you want to set it up, here’s how you do it. Connect your first router directly to the internet via your modem. This router will provide internet to the two other routers in this setup, each of which will broadcast a different wi-fi network. No other devices will connect to it, so you can turn its wi-fi off. Next, connect your second router to the first and use it as your Trusted Computers network. Last, connect your third router to the first and use it as your IoT Devices network. Make sure its wi-fi name and password are different from the Trusted Computers network.</p>
 </blockquote>
@@ -295,7 +295,7 @@ As noted above, your workplace may use SSO for signing into services provided by
 <p>If you have a smart speaker, <strong>throw it out</strong>.</p>
 <p>Smart speakers like Alexa and Google Home sit in your house and can listen to everything you and your family say, then send those recordings back to Amazon and Google, where you have no control over who can listen to them or give them to someone else. Even with the privacy policies that accompany these devices, even with the quality-of-life improvement, <em>even</em> with the Three Dumb Router approach, we judge the potential tradeoffs to be too high. We judge it impossible to confidently and securely host a smart speaker in your house — so don’t.</p>
 <h2 id="smart-tvs-set-top-boxes-and-game-consoles">Smart TVs, Set-Top Boxes, and Game Consoles</h2>
-<p>Much like our recommendation for Internet of Things devices in general, the recommendation is to not buy a smart TV (though it’s getting harder and harder to do this). Failing that, turn off the smart TV features and avoid connecting the TV to the internet at all if you can. Some smart TVs continually send fingerprints of the screen video back to the manufacturer<sup id="fnref-5"><a href="#fn-5" class="footnote-ref">5</a></sup>, so they can track you and send you ads. Much like smart speakers, the potential tradeoffs are too great to chance.</p>
+<p>Much like our recommendation for Internet of Things devices in general, the recommendation is to not buy a smart TV (though it’s getting harder and harder to do this). Failing that, turn off the smart TV features and avoid connecting the TV to the internet at all if you can. Some smart TVs continually send fingerprints of the screen video back to the manufacturer,<sup id="fnref-6"><a href="#fn-6" class="footnote-ref">6</a></sup> so they can track you and send you ads. Much like smart speakers, the potential tradeoffs are too great to chance.</p>
 <p>If the TV requires an internet connection to set up (and you aren’t using the Three Dumb Routers setup), use an Ethernet cable or temporarily change the password on your WiFi before connecting your TV to it. (Don’t forget to change it back!) Then, once it’s set up, turn the internet connection on your TV off.</p>
 <p>Set-top boxes like Roku or Apple TV and game consoles like an Xbox or PlayStation are generally more trustworthy than the smart TV itself, or at least mean you don’t have to throw the whole TV out if you decide later that you don’t want the privacy risk.</p>
 <blockquote class="one-step-further">
@@ -349,16 +349,46 @@ As noted above, your workplace may use SSO for signing into services provided by
 <div class="footnotes">
 <hr>
 <ol>
-<li id="fn-1">On older Macs or external keyboards, use the Eject button; on Mac laptops with a Touch Bar, use the Touch ID button at the top right.<a href="#fnref-1" class="footnote-backref">↩</a></li>
-<li id="fn-2">The OS’s disk encryption is usually configured to use account login passwords, so there’s no need to remember another password.<a href="#fnref-2" class="footnote-backref">↩</a></li>
-<li id="fn-3"><a href="https://www.wired.co.uk/article/phone-lock-screen-password">https://www.wired.co.uk/article/phone-lock-screen-password</a><a href="#fnref-3" class="footnote-backref">↩</a></li>
-<li id="fn-4">See, e.g.: <a href="https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/">Court rules against man who was forced to fingerprint-unlock his phone</a>, <a href="https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/">Virginia judge: Police can demand a suspect unlock a phone with a fingerprint</a>, and <a href="https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky">Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky</a>.<a href="#fnref-4" class="footnote-backref">↩</a></li>
-<li id="fn-5">See, e.g.: <a href="https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/">Smart TVs like Samsung, LG and Roku are tracking everything we watch</a>, <a href="https://www.consumerreports.org/cro/news/2015/02/samsung-lg-vizio-smart-tvs-watch-everything-you-watch/index.htm">Some Smart TVs Watch What You Watch</a>, and <a href="https://frame.work/blog/in-defense-of-dumb-tvs">In Defense of Dumb TVs</a>.<a href="#fnref-5" class="footnote-backref">↩</a></li>
+<li id="fn-1">
+<p>On older Macs or external keyboards, use the Eject button; on Mac laptops with a Touch Bar, use the Touch ID button at the top right.<a href="#fnref-1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn-2">
+<p>The OS’s disk encryption is usually configured to use account login passwords, so there’s no need to remember another password.<a href="#fnref-2" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn-3">
+<p><a href="https://www.wired.co.uk/article/phone-lock-screen-password">Why you should never use pattern passwords on your phone</a><a href="#fnref-3" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn-4">
+<p>See, e.g.:</p>
+<ul>
+<li><a href="https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/" title="https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/">Court rules against man who was forced to fingerprint-unlock his phone</a></li>
+<li><a href="https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/" title="https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/">Virginia judge: Police can demand a suspect unlock a phone with a fingerprint</a></li>
+<li><a href="https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky" title="https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky">Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky</a></li>
+</ul>
+<p><a href="#fnref-4" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn-5">
+<p>See, e.g.:</p>
+<ul>
+<li><a href="https://www.grc.com/sn/sn-545.htm">Security Now! episode 545 “Three Dumb Routers”</a></li>
+<li><a href="https://pcper.com/2016/08/steve-gibsons-three-router-solution-to-iot-insecurity/">“Three Dumb Routers” at PC Perspective</a>.</li>
+</ul>
+<p><a href="#fnref-5" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn-6">
+<p>See, e.g.:</p>
+<ul>
+<li><a href="https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/">Smart TVs like Samsung, LG and Roku are tracking everything we watch</a></li>
+<li><a href="https://www.consumerreports.org/cro/news/2015/02/samsung-lg-vizio-smart-tvs-watch-everything-you-watch/index.htm">Some Smart TVs Watch What You Watch</a></li>
+<li><a href="https://frame.work/blog/in-defense-of-dumb-tvs">In Defense of Dumb TVs</a>.</li>
+</ul>
+<p><a href="#fnref-6" class="footnote-backref">↩</a></p>
+</li>
 </ol>
 </div></main>
     <footer>
       <p class="license">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
-      <p>This guide was last updated on 2021-03-10. Generated 2021-03-13T20:54:14.002Z.</p>
+      <p>This guide was last updated on 2021-03-10. Generated 2021-03-14T02:31:58.377Z.</p>
     </footer>
     <script src="./js/main.js"></script>
   </body>

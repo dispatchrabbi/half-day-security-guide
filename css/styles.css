@@ -173,8 +173,25 @@ main blockquote h3 {
 main blockquote p:last-child {
   margin-bottom: 0;
 }
+main a.footnote-ref,
 main .footnotes .footnote-backref {
-  margin-left: 1ch;
+  padding: 3px;
+}
+main a.footnote-ref:hover,
+main .footnotes .footnote-backref:hover {
+  background: rgba(69, 69, 69, 0.3);
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+main .footnotes .footnote-backref {
+  margin-left: 0.5ch;
+  padding-right: 4px;
+}
+main .footnotes p {
+  margin: 0;
+}
+main .footnotes ul li {
+  list-style: disclosure-closed;
 }
 
 footer {
