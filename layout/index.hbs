@@ -30,8 +30,18 @@
     </header>
     <nav>
       <div id="nav-scroll-container">
-        <h1>Table of Contents</h1>
-        {{{ toc }}}
+        <toc>
+          <h1>Table of Contents</h1>
+          {{{ toc }}}
+        </toc>
+        <resources>
+          <h1>Resources</h1>
+          <ul>
+            {{#each resources}}
+            <li><a href="{{file}}">{{title}}</a></li>
+            {{/each}}
+          </ul>
+        </resources>
       </div>
     </nav>
     <main>{{{ body }}}</main>
