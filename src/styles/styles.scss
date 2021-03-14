@@ -52,7 +52,7 @@ nav {
     font-variant: small-caps;
   }
 
-  > #nav-scroll-container > toc > ul > li {
+  > #nav-scroll-container > #toc > ul > li {
     margin-bottom: 1em;
   }
 
@@ -80,12 +80,12 @@ nav {
     }
   }
 
-  toc a {
+  #toc a {
     color: inherit;
     text-decoration: none;
   }
   
-  resources a {
+  #resources a {
     padding: .1rem .25rem;
     border-radius: .25rem;
     font-size: 0.8em;
