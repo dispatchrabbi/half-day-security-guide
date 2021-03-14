@@ -6,7 +6,7 @@ function findCurrentSection(htmlEl, mainEl) {
   // figure out which section we're in. basically, in order to make this work well for the first and last sections, we:
   // 1. pick a point as far down the window as we are down the scrollbar and in the middle of the main element
   const scrollPct = scrollTop / (scrollHeight - windowHeight);
-  const targetY = windowHeight * scrollPct;
+  const targetY = (windowHeight - 1) * scrollPct; // targetY is a position but windowHeight is a length, -1 to avoid fencepost error
   const targetX = (mainEl.offsetLeft + mainEl.scrollWidth) / 2;
 
   // 2. figure out what direct child of <main> that corresponds to
