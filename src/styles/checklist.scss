@@ -18,19 +18,22 @@ body {
 checklist {
   grid-area: checklist;
   
-  max-width: 48em;
+  //max-width: 60em;
   //padding: 0 2em 0 0;
+
+  column-count: 2;
+  column-width: 25em;
+  column-gap: 1.5rem;
+
+  //ul {
+  //  background-color: red;
+  //}
 
   h1 {
     font-size: 2rem;
-
-    &:not(:first-child) {
-      margin-top: 3rem;
-    }
   }
 
   h2 {
     font-size: 1.6rem;
-    margin-top: 2rem;
   }
 }
