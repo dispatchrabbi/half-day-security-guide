@@ -162,8 +162,30 @@ main {
     }
   }
 
+  a.footnote-ref,
   .footnotes .footnote-backref {
-    margin-left: 1ch;
+    padding: 3px;
+    
+    &:hover {
+      background: rgba($color-gray-70, 0.3);
+      border-radius: .25rem;
+      text-decoration: none;
+    }
+  }
+  
+  .footnotes {
+    .footnote-backref {
+      margin-left: .5ch;
+      padding-right: 4px;
+    }
+    
+    p {
+      margin: 0;
+    }
+    
+    ul li {
+      list-style: disclosure-closed;
+    }
   }
 }
 

@@ -202,14 +202,21 @@ Now let's look at your Android or iOS mobile devices. If you're using a device w
 ## Add a long lock screen passcode
 You'll be shocked to learn that our first recommendation is to add a password to your device! As usual, longer is better, but especially on phones, passwords can be difficult to type. Both Android and iOS have the ability to configure numeric passcodes of any length you choose so you get the security of a longer code with the ease of entry of fewer, larger buttons. On Android, this is the "PIN" screen lock. (We don't recommend using the "Pattern" unlock, as it's too easy for someone to learn your code by looking over your shoulder.[^3]) On iOS, you'll need to choose the "Custom Alphanumeric Code" option when setting a new passcode. This will let you set a passcode using both letters and numbers, but if you only use numbers for your code, iOS will present the numeric keypad when you want to unlock your device instead of the full keyboard.
 
-  [^3]: <https://www.wired.co.uk/article/phone-lock-screen-password>
+  [^3]: [Why you should never use pattern passwords on your phone](https://www.wired.co.uk/article/phone-lock-screen-password)
 
 > ### Paranoia Alert!
-> Biometric authentication (via fingerprint, face, or iris recognition) can be very convenient! But there may be a *legal* difference between these methods of unlocking your device and a passcode or password. In the United States of America, the Fifth Amendment to the Constitution protects you from being forced to reveal self-incriminating information. Most jurisdictions in the US consider forcing you to reveal your passcode to be self-incrimination, but allow forcing you to operate a biometric unlock. The analogy is, broadly, that if you were searched and a key to a safe was found, the authorities can use the key to unlock it; if that safe required a combination to unlock, they cannot force you to tell them the combination.[^4]
+> Biometric authentication (via fingerprint, face, or iris recognition) can be very convenient! But there may be a *legal* difference between these methods of unlocking your device and a passcode or password. In the United States of America, the Fifth Amendment to the Constitution protects you from being forced to reveal self-incriminating information. Most jurisdictions in the US consider forcing you to reveal your passcode to be self-incrimination, but allow forcing you to operate a biometric unlock. The analogy is, broadly, that if you were searched and a key to a safe was found, the authorities can use the key to unlock it; if that safe required a combination to unlock, they cannot force you to tell them the combination.[^fingerprints]
 >
 > Note also, though, that the absence of biometric unlock can't prevent authorities from trying to break into your device or holding you in jail until you reveal the passcode. Because of this, the authors of this guide recommend using passwords over biometric methods wherever possible. It is worth reiterating, though, that the authors are not lawyers and this is not legal advice; if this may be an issue for you, please consult your own legal professional. Also, laws and the interpretations thereof change; this is current case law as of January 2021.
 
-  [^4]: See, e.g.: [Court rules against man who was forced to fingerprint-unlock his phone](https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/), [Virginia judge: Police can demand a suspect unlock a phone with a fingerprint](https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/), and [Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky](https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky).
+  [^fingerprints]: See, e.g.:
+    * [Court rules against man who was forced to fingerprint-unlock his phone][fp1-ars]
+    * [Virginia judge: Police can demand a suspect unlock a phone with a fingerprint][fp2-ars]
+    * [Federal, state court rulings on whether biometrics protected by Fifth Amendment get murky][fp3-bio]
+
+  [fp1-ars]: https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/ "https://arstechnica.com/tech-policy/2017/01/court-rules-against-man-who-was-forced-to-fingerprint-unlock-his-phone/"
+  [fp2-ars]: https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/ "https://arstechnica.com/tech-policy/2014/10/virginia-judge-police-can-demand-a-suspect-unlock-a-phone-with-a-fingerprint/"
+  [fp3-bio]: https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky "https://www.biometricupdate.com/201912/federal-state-court-rulings-on-whether-biometrics-protected-by-fifth-amendment-get-murky"
 
 ## Change your phone's name and limit who can see it
 Phones are usually pre-set to call themselves "Jane's Phone" or something similar, based on how you first set it up. That name is then broadcast over Bluetooth and, if it's an iOS device, AirDrop, where other people's devices can see it. There's no need for strangers to find out your name just because they're nearby, so go into Bluetooth and Airdrop settings and change your phone's name to something less identifiable.
@@ -259,11 +266,15 @@ Basically, you should consider each of these devices to be a tiny computer you d
 We know that this is a hard line to take, and it pulls hard for the security side of the security/convenience tradeoff. However, if a smart device makes a big quality-of-life difference for you, or if you've already got some in your home you're not willing to part with, then we've got a backup recommendation for you: do your research. Figure out what data the device collects and sends back to its manufacturer, and what policies that manufacturer makes about the data. Also be sure to install updates promptly and keep an eye out for changing data policies or company acquisitions. We also encourage you to implement the Three Dumb Routers setup described in the One Step Further section below. If you're going to have smart devices in your home, we'd rather you go about it as securely as possible.
 
 > ### One Step Further
-> If you absolutely want to have smart devices all over your home, you can mitigate the risk with a network configuration called the Three Dumb Routers network, which creates a Trusted Devices network and an IoT Devices network. The Trusted Devices network hosts your computers, phones, tablets, printers, and so on. The IoT Devices network is where you put your internet-connected fridges, smart TVs, color-changing light bulbs, smart speakers, and so on.
+> If you absolutely want to have smart devices all over your home, you can mitigate the risk with a network configuration called the Three Dumb Routers network, which creates a Trusted Devices network and an IoT Devices network.[^3dr] The Trusted Devices network hosts your computers, phones, tablets, printers, and so on. The IoT Devices network is where you put your internet-connected fridges, smart TVs, color-changing light bulbs, smart speakers, and so on.
 >
 > Because of the way routers work, it's difficult for a device on the IoT Devices network to see devices on the Trusted Computers network, so they have limited ability to cause problems. And because IoT devices are generally designed to be controlled from anywhere, you generally have no problem doing so from the Trusted Computers network.
 >
 > If you want to set it up, here's how you do it. Connect your first router directly to the internet via your modem. This router will provide internet to the two other routers in this setup, each of which will broadcast a different wi-fi network. No other devices will connect to it, so you can turn its wi-fi off. Next, connect your second router to the first and use it as your Trusted Computers network. Last, connect your third router to the first and use it as your IoT Devices network. Make sure its wi-fi name and password are different from the Trusted Computers network.
+
+  [^3dr]: See, e.g.:
+    * [Security Now! episode 545 "Three Dumb Routers"](https://www.grc.com/sn/sn-545.htm)
+    * ["Three Dumb Routers" at PC Perspective](https://pcper.com/2016/08/steve-gibsons-three-router-solution-to-iot-insecurity/).
 
 ## Smart Speakers
 If you have a smart speaker, **throw it out**.
@@ -271,7 +282,7 @@ If you have a smart speaker, **throw it out**.
 Smart speakers like Alexa and Google Home sit in your house and can listen to everything you and your family say, then send those recordings back to Amazon and Google, where you have no control over who can listen to them or give them to someone else. Even with the privacy policies that accompany these devices, even with the quality-of-life improvement, *even* with the Three Dumb Router approach, we judge the potential tradeoffs to be too high. We judge it impossible to confidently and securely host a smart speaker in your house — so don't.
 
 ## Smart TVs, Set-Top Boxes, and Game Consoles
-Much like our recommendation for Internet of Things devices in general, the recommendation is to not buy a smart TV (though it's getting harder and harder to do this). Failing that, turn off the smart TV features and avoid connecting the TV to the internet at all if you can. Some smart TVs continually send fingerprints of the screen video back to the manufacturer[^5], so they can track you and send you ads. Much like smart speakers, the potential tradeoffs are too great to chance.
+Much like our recommendation for Internet of Things devices in general, the recommendation is to not buy a smart TV (though it's getting harder and harder to do this). Failing that, turn off the smart TV features and avoid connecting the TV to the internet at all if you can. Some smart TVs continually send fingerprints of the screen video back to the manufacturer,[^5] so they can track you and send you ads. Much like smart speakers, the potential tradeoffs are too great to chance.
 
 If the TV requires an internet connection to set up (and you aren't using the Three Dumb Routers setup), use an Ethernet cable or temporarily change the password on your WiFi before connecting your TV to it. (Don't forget to change it back!) Then, once it's set up, turn the internet connection on your TV off.
 
@@ -280,7 +291,10 @@ Set-top boxes like Roku or Apple TV and game consoles like an Xbox or PlayStatio
 > ### One Step Further
 > If you want to watch YouTube and Netflix and all that good stuff on your TV without using a smart TV's features, you can set up a small computer (such as an Intel NUC or a Raspberry Pi) running a well-secured Linux HTPC distro. Do note that this is quite the rabbit hole, as there are a lot of options available in this space.
 
-  [^5]: See, e.g.: [Smart TVs like Samsung, LG and Roku are tracking everything we watch](https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/), [Some Smart TVs Watch What You Watch](https://www.consumerreports.org/cro/news/2015/02/samsung-lg-vizio-smart-tvs-watch-everything-you-watch/index.htm), and [In Defense of Dumb TVs](https://frame.work/blog/in-defense-of-dumb-tvs).
+  [^5]: See, e.g.:
+    * [Smart TVs like Samsung, LG and Roku are tracking everything we watch](https://www.washingtonpost.com/technology/2019/09/18/you-watch-tv-your-tv-watches-back/)
+    * [Some Smart TVs Watch What You Watch](https://www.consumerreports.org/cro/news/2015/02/samsung-lg-vizio-smart-tvs-watch-everything-you-watch/index.htm)
+    * [In Defense of Dumb TVs](https://frame.work/blog/in-defense-of-dumb-tvs).
 
 # Browsing the internet
 
