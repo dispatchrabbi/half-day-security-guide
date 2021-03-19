@@ -115,7 +115,7 @@ The system used by authenticator apps for 2FA is a standard, so any of the major
 
 When setting up 2FA, if you are given the choice between using an authenticator app or receiving text messages, we recommend using the authenticator app.[^authapp] If the service can only send text messages, that's fine too. The authenticator app strategy is slightly more secure, but not enough that we're going to make a big deal out of it.
 
-  [^authapp]: Google also has a two-factor authentication system where, if you have an Android phone, it will pop up a screen on your phone asking if you're signing in. This only works for Google apps, but it's also a valid choice if you want to use it.
+  [^authapp]: Google also has a two-factor authentication system where, if you have an Android phone, it will pop up a screen on your phone asking if you're signing in. This only works for Google apps, but it's also a valid choice if you want to use it. Apple has a similar system that pops up a code on iOS devices and Macs when you sign into Apple services.
 
 When you set up 2FA, you'll be shown a QR code to scan into your authenticator app, and then asked to enter the code your app shows you to confirm that it's set up right. You'll also get a list of recovery codes to download. You won't be able to access your recovery codes again later, so keep them safe and in a place where you can get to them without needing to log into an account that might require a recovery code. Storing printed copies in a safe is another good option.
 
@@ -286,7 +286,7 @@ We know that this is a hard line to take, and it pulls hard for the security sid
 ## Smart Speakers
 If you have a smart speaker, **throw it out**.
 
-Smart speakers like Alexa and Google Home sit in your house and can listen to everything you and your family say, then send those recordings back to Amazon and Google, where you have no control over who can listen to them or give them to someone else. Even with the privacy policies that accompany these devices, even with the quality-of-life improvement, *even* with the Three Dumb Router approach, we think the potential tradeoffs are too high. We possible to confidently and securely host a smart speaker in your house — so don't.
+Smart speakers like Alexa and Google Home sit in your house and can listen to everything you and your family say, then send those recordings back to Amazon and Google, where you have no control over who can listen to them or give them to someone else. Even with the privacy policies that accompany these devices, even with the quality-of-life improvement, *even* with the Three Dumb Router approach, we think the potential tradeoffs are too high. We just don't think it's possible to confidently and securely host a smart speaker in your house — so don't.
 
 ## Smart TVs, Set-Top Boxes, and Game Consoles
 Much like our recommendation for Internet of Things devices in general, the recommendation is to not buy a smart TV (though it's getting harder and harder to do this). Failing that, turn off the smart TV features and avoid connecting the TV to the internet at all if you can. Some smart TVs continually send fingerprints of the screen video back to the manufacturer,[^smarttv] so they can track you and send you ads. Much like smart speakers, the potential tradeoffs are too great to chance.
