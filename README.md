@@ -8,9 +8,9 @@ This is the code that powers the guide. Looking for the actual guide? Go to http
 
 There are several directories in this project, each for a different aspect of it:
 - _lib/_ contains the code that does the site generation
-- _layout/_ contains the template for the text to fit into
-- _src/_ contains the actual text for the guide
-- _static/_ contains any static assets to be copied as-is into _dist/_ (Not yet implemented)
+- _layouts/_ contains the template for the text to fit into
+- _src/_ contains dynamic source files like the text for the pages and the pre-compiled styles
+- _static/_ contains any static assets to be copied as-is into _dist/_
 - _dist/_ is where the output goes, so that's the directory that should get served
 
 ## Setup

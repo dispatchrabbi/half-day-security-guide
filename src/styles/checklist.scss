@@ -1,39 +1,12 @@
-@import "standard";
-@import "uswds-colors/colors";
+@import "base";
 
 body {
-  display: grid;
   grid-template:
-    "title title"   			auto
-    "checklist checklist" auto
-    "footer footer" 			auto / 1fr 3fr;
-  gap: 1.5em;
-
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  background-color: white;
-  color: black;
+    "title"   auto
+    "text"    auto
+    "footer"  auto / 1fr;
 }
 
-checklist {
-  grid-area: checklist;
-  
-  //max-width: 60em;
-  //padding: 0 2em 0 0;
-
-  column-count: 2;
-  column-width: 25em;
-  column-gap: 1.5rem;
-
-  //ul {
-  //  background-color: red;
-  //}
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
+main {
+  padding: 0 2em;
 }
