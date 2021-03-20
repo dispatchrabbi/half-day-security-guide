@@ -45,9 +45,9 @@ async function init() {
   // pull in info about the site
   const infoFile = await readFile(path.join(__dirname, 'src/info.json'));
   const infoJSON = {
+    resources: [], // resources first so it can be overwritten by anything in the infoFile
     ...JSON.parse(infoFile.toString()),
     generatedDate: new Date().toISOString(),
-    resources: [],
   };
 
   setupHandlebars({
