@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> head }}
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    {{> header }}
+    <nav>
+      <div id="nav-scroll-container">
+        <section id="toc">
+          <h1>Table of Contents</h1>
+          {{{ toc }}}
+        </section>
+        <section id="resources">
+          <h1>Resources</h1>
+          <ul><li><ul>
+            {{#each resources}}
+            <li><a href="{{file}}">{{title}}</a></li>
+            {{/each}}
+          </ul></li></ul>
+        </section>
+      </div>
+    </nav>
+    <main>{{{ body }}}</main>
+    {{> footer }}
+    <script src="./js/main.js"></script>
+  </body>
+</html>

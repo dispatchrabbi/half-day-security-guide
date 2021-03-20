@@ -4,20 +4,34 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 import { readFile, writeFile, mkdir } from 'fs/promises';
 
-import generate from './lib/generate.js';
+import setupHandlebars from './lib/handlebars.js';
+import compileStyles from './lib/sass.js';
+
+import generateGuide from './lib/pages/guide.js';
+import generateChecklist from './lib/pages/checklist.js';
 
 import { promisify } from 'util';
 import copy from 'copy';
 
-import sass from 'sass';
+async function buildGuide(infoJSON) {
+  const indexTemplate = await readFile(path.join(__dirname, 'layouts/index.hbs'));
+  const srcText = await readFile(path.join(__dirname, 'src/text.md'));
+  const indexPage = await generateGuide(srcText.toString(), indexTemplate.toString(), infoJSON);
 
-async function copyStyles(styleFile, destDir, styleDest) {
-  // weirdly, renderSync is faster than render with Dart sass: https://sass-lang.com/documentation/js-api#fiber
-  const styles = sass.renderSync({ file: styleFile });
+  await writeFile(path.join(__dirname, 'dist/index.html'), indexPage, 'utf8');
+}
 
-  await mkdir(path.join(__dirname, destDir));
+async function buildChecklist(infoJSON) {
+  const checklistTemplate = await readFile(path.join(__dirname, 'layouts/checklist.hbs'));
+  const srcText = await readFile(path.join(__dirname, 'src/checklist.md'));
+  const checklistPage = await generateChecklist(srcText.toString(), checklistTemplate.toString(), infoJSON);
 
-  await writeFile(path.join(__dirname, destDir, styleDest), styles.css.toString(), 'utf8');
+  await writeFile(path.join(__dirname, 'dist/checklist.html'), checklistPage, 'utf8');
+
+  return {
+    title: 'Checklist',
+    file: 'checklist.html',
+  };
 }
 
 async function init() {
@@ -28,15 +42,28 @@ async function init() {
     if(ex.code !== 'EEXIST' /* directory already exists */) { throw ex; }
   }
 
-  const indexTemplate = await readFile(path.join(__dirname, 'layout/index.hbs'));
-  const srcText = await readFile(path.join(__dirname, 'src/text.md'));
-  //const footerHTML = await readFile(path.join(__dirname, 'src/footer.html'));
-  const infoJson = await readFile(path.join(__dirname, 'src/info.json'));
-  const indexPage = await generate(srcText.toString(), indexTemplate.toString(), JSON.parse(infoJson.toString()));
+  // pull in info about the site
+  const infoFile = await readFile(path.join(__dirname, 'src/info.json'));
+  const infoJSON = {
+    resources: [], // resources first so it can be overwritten by anything in the infoFile
+    ...JSON.parse(infoFile.toString()),
+    generatedDate: new Date().toISOString(),
+  };
 
-  await writeFile(path.join(__dirname, 'dist/index.html'), indexPage, 'utf8');
+  setupHandlebars({
+    partialsDir: path.join(__dirname, 'layouts/partials'),
+  });
 
-  await copyStyles('src/styles/styles.scss', 'dist/css', 'styles.css');
+  // build a checklist page
+  const checklistInfo = await buildChecklist(infoJSON);
+  infoJSON.resources.push(checklistInfo);
+
+  // build the main page (do this last so it can use the resources list)
+  await buildGuide(infoJSON);
+
+  // compile scss into css
+  await mkdir(path.join(__dirname, 'dist/css'));
+  await compileStyles(path.join(__dirname, 'src/styles'), path.join(__dirname, 'dist/css'));
 
   // copy static files
   await promisify(copy)(path.join(__dirname, 'static', '**'), path.join(__dirname, 'dist'));

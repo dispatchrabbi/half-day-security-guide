@@ -16,7 +16,7 @@
     "build": {
       "patterns": [
         "src",
-        "layout",
+        "layouts",
         "static"
       ],
       "extensions": "*"

@@ -1,0 +1,12 @@
+@import "base";
+
+body {
+  grid-template:
+    "title"   auto
+    "text"    auto
+    "footer"  auto / 1fr;
+}
+
+main {
+  padding: 0 2em;
+}
