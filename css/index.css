@@ -40,6 +40,14 @@ variable that is, itself, a list
 /*
 Taken from USWDS 2.10.2 (https://designsystem.digital.gov/).
 */
+/* General styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  background-color: white;
+  color: black;
+}
+
 a {
   color: #3e4ded;
   text-decoration: none;
@@ -53,14 +61,11 @@ code {
   color: #d72d79;
 }
 
+/* Page layout */
 body {
   display: grid;
   grid-template: "title title" auto "toc text" auto "footer footer" auto/1fr 3fr;
   gap: 1.5em;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  background-color: white;
-  color: black;
 }
 
 header {
@@ -73,6 +78,12 @@ header h1 {
 header h2 {
   font-size: 1.2em;
   color: #757575;
+}
+header a {
+  color: inherit;
+}
+header a:hover {
+  text-decoration: none;
 }
 
 nav {
@@ -96,7 +107,7 @@ nav h1 {
   text-transform: lowercase;
   font-variant: small-caps;
 }
-nav > #nav-scroll-container > ul > li {
+nav > #nav-scroll-container > section > ul > li {
   margin-bottom: 1em;
 }
 nav ul {
@@ -138,6 +149,37 @@ main h2 {
   font-size: 1.6rem;
   margin-top: 2rem;
 }
+main a.footnote-ref,
+main .footnotes .footnote-backref {
+  padding: 3px;
+}
+main a.footnote-ref:hover,
+main .footnotes .footnote-backref:hover {
+  background: rgba(69, 69, 69, 0.3);
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+main .footnotes .footnote-backref {
+  margin-left: 0.5ch;
+  padding-right: 4px;
+}
+main .footnotes p {
+  margin: 0;
+}
+main .footnotes ul li {
+  list-style: disclosure-closed;
+}
+
+footer {
+  grid-area: footer;
+  padding: 2em;
+  background-color: #d9e8f6;
+  font-size: 0.8rem;
+}
+footer p {
+  margin: 0;
+}
+
 main blockquote {
   padding: 1rem;
   border: 2px solid black;
@@ -172,34 +214,4 @@ main blockquote h3 {
 }
 main blockquote p:last-child {
   margin-bottom: 0;
-}
-main a.footnote-ref,
-main .footnotes .footnote-backref {
-  padding: 3px;
-}
-main a.footnote-ref:hover,
-main .footnotes .footnote-backref:hover {
-  background: rgba(69, 69, 69, 0.3);
-  border-radius: 0.25rem;
-  text-decoration: none;
-}
-main .footnotes .footnote-backref {
-  margin-left: 0.5ch;
-  padding-right: 4px;
-}
-main .footnotes p {
-  margin: 0;
-}
-main .footnotes ul li {
-  list-style: disclosure-closed;
-}
-
-footer {
-  grid-area: footer;
-  padding: 2em;
-  background-color: #d9e8f6;
-  font-size: 0.8rem;
-}
-footer p {
-  margin: 0;
 }

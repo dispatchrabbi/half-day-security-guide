@@ -1,0 +1,189 @@
+/*
+----------------------------------------
+map-collect()
+----------------------------------------
+Collect multiple maps into a single
+large map
+source: https://gist.github.com/bigglesrocks/d75091700f8f2be5abfe
+----------------------------------------
+Taken from USWDS 2.10.2 (https://designsystem.digital.gov/).
+*/
+/*
+----------------------------------------
+smart-quote()
+----------------------------------------
+Quotes strings
+Inspects `px`, `xs`, and `xl` numbers
+Leaves bools as is
+----------------------------------------
+*/
+/*
+----------------------------------------
+map-deep-get()
+----------------------------------------
+@author Hugo Giraudel
+@access public
+@param {Map} $map - Map
+@param {Arglist} $keys - Key chain
+@return {*} - Desired value
+----------------------------------------
+*/
+/*
+----------------------------------------
+get-system-color()
+----------------------------------------
+Derive a system color from its
+family, value, and vivid or a passed
+variable that is, itself, a list
+----------------------------------------
+*/
+/*
+Taken from USWDS 2.10.2 (https://designsystem.digital.gov/).
+*/
+/* General styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  background-color: white;
+  color: black;
+}
+
+a {
+  color: #3e4ded;
+  text-decoration: none;
+}
+a:hover {
+  color: #222fbf;
+  text-decoration: underline;
+}
+
+code {
+  color: #d72d79;
+}
+
+/* Page layout */
+body {
+  display: grid;
+  grid-template: "title title" auto "toc text" auto "footer footer" auto/1fr 3fr;
+  gap: 1.5em;
+}
+
+header {
+  grid-area: title;
+  padding: 2em 2em 0 2em;
+}
+header h1 {
+  font-weight: 600;
+}
+header h2 {
+  font-size: 1.2em;
+  color: #757575;
+}
+header a {
+  color: inherit;
+}
+header a:hover {
+  text-decoration: none;
+}
+
+nav {
+  grid-area: toc;
+  padding: 0 0 0 1.75em;
+}
+nav > #nav-scroll-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+nav h1 {
+  position: sticky;
+  top: 0;
+  padding: 0.5em 0 0.5em 0.25em;
+  margin: 0;
+  background-color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+nav > #nav-scroll-container > section > ul > li {
+  margin-bottom: 1em;
+}
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+nav ul p {
+  margin: 0;
+  font-weight: 400;
+}
+nav ul ul li {
+  font-size: 0.8em;
+}
+nav li > p, nav li > ul > li {
+  padding: 0.1rem 0.25rem;
+}
+nav li > p.current, nav li > ul > li.current {
+  background-color: #d4e5ff;
+  color: #162e51;
+  border-radius: 0.25rem;
+}
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  grid-area: text;
+  max-width: 48em;
+  padding: 0 2em 0 0;
+}
+main h1 {
+  font-size: 2rem;
+}
+main h1:not(:first-child) {
+  margin-top: 3rem;
+}
+main h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+main a.footnote-ref,
+main .footnotes .footnote-backref {
+  padding: 3px;
+}
+main a.footnote-ref:hover,
+main .footnotes .footnote-backref:hover {
+  background: rgba(69, 69, 69, 0.3);
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+main .footnotes .footnote-backref {
+  margin-left: 0.5ch;
+  padding-right: 4px;
+}
+main .footnotes p {
+  margin: 0;
+}
+main .footnotes ul li {
+  list-style: disclosure-closed;
+}
+
+footer {
+  grid-area: footer;
+  padding: 2em;
+  background-color: #d9e8f6;
+  font-size: 0.8rem;
+}
+footer p {
+  margin: 0;
+}
+
+body {
+  grid-template: "title" auto "text" auto "footer" auto/1fr;
+}
+
+main {
+  padding: 0 2em;
+}
