@@ -1,46 +1,53 @@
 @import "base";
 
-main blockquote {
-  padding: 1rem;
-  border: 2px solid black;
-  border-radius: .75rem;
-  font-size: .8rem;
-  margin-left: .5rem;
-  margin-right: .5rem;
-
-
-  &.did-you-know {
-    background: $color-yellow-10;
-    border-color: $color-yellow-30v;
-
-    h3 {
-      color: $color-yellow-80v;
+main {
+  img.inline {
+    width: 256px;
+    margin-left: 1rem;
+  }
+  
+  blockquote {
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: .75rem;
+    font-size: .8rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+  
+  
+    &.did-you-know {
+      background: $color-yellow-10;
+      border-color: $color-yellow-30v;
+  
+      h3 {
+        color: $color-yellow-80v;
+      }
     }
-  }
-
-  &.paranoia-alert {
-    background: $color-red-cool-10v;
-    border-color: $color-red-50v;
-
-    h3 {
-      color: $color-red-cool-80v;
+  
+    &.paranoia-alert {
+      background: $color-red-cool-10v;
+      border-color: $color-red-50v;
+  
+      h3 {
+        color: $color-red-cool-80v;
+      }
     }
-  }
-
-  &.one-step-further {
-    background: $color-mint-cool-10;
-    border-color: $color-mint-cool-30v;
-
-    h3 {
-      color: $color-mint-cool-80;
+  
+    &.one-step-further {
+      background: $color-mint-cool-10;
+      border-color: $color-mint-cool-30v;
+  
+      h3 {
+        color: $color-mint-cool-80;
+      }
     }
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }
