@@ -5,7 +5,7 @@ These checklists are here to help you follow along with all the recommendations 
 These are all the things you can do today to make your digital life safer.
 
 ## Passwords
-- Get a password manager like 1Password or BitWarden
+- Get a password manager like [1Password](https://1password.com/) or [BitWarden](https://bitwarden.com/)
 - Turn on 2FA wherever you can
 
 ## Your home network
@@ -20,12 +20,12 @@ These are all the things you can do today to make your digital life safer.
 - Clean up unused user accounts
 - Install pending OS updates
 - Uninstall anti-malware scanners
-- Set up automatic cloud backups with Backblaze or Carbonite
+- Set up automatic cloud backups with [Backblaze](https://www.backblaze.com/) or [Carbonite](https://www.carbonite.com/)
 - Turn on disk encryption
 
 ## Phones and tablets
 - Add a long numeric passcode to your lock screen
-- Install and use Signal for messaging
+- Install and use [Signal](https://signal.org/en/) for messaging
 - Install pending OS and app updates
 - Uninstall unused apps
 - Audit remaining app permissions
@@ -40,14 +40,14 @@ These are all the things you can do today to make your digital life safer.
 - Disconnect devices from the network if possible
 
 ## Browsing the internet
-- Switch to Firefox
-- Install the Privacy Badger and HTTPS Everywhere extensions
-- Switch your browser's default search engine to DuckDuckGo
+- Switch to [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+- Install the [Privacy Badger](https://privacybadger.org/) and [HTTPS Everywhere](https://www.eff.org/https-everywhere) extensions
+- Switch your browser's default search engine to [DuckDuckGo](https://duckduckgo.com/)
 
 ## Your services
 - Consolidate your services
 - Check your privacy settings in all your services
-- Check Have I Been Pwned? for your accounts
+- Check [Have I Been Pwned?](https://haveibeenpwned.com/) for your accounts
 - Change passwords for any accounts that show up
 
 # Staying safe into the future
