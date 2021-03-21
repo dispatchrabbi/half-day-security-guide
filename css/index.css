@@ -1,5 +1,24 @@
 /*
 ----------------------------------------
+Root font size
+----------------------------------------
+Setting $theme-respect-user-font-size to
+true sets the root font size to 100% and
+uses ems for media queries
+----------------------------------------
+$theme-root-font-size only applies when
+$theme-respect-user-font-size is set to
+false.
+
+This will set the root font size
+as a specific px value and use px values
+for media queries.
+
+Accepts true or false
+----------------------------------------
+*/
+/*
+----------------------------------------
 map-collect()
 ----------------------------------------
 Collect multiple maps into a single
@@ -38,7 +57,59 @@ variable that is, itself, a list
 ----------------------------------------
 */
 /*
+----------------------------------------
+units()
+----------------------------------------
+Converts a spacing unit into
+the desired final units (currently rem)
+----------------------------------------
+*/
+/*
+----------------------------------------
+spacing-multiple()
+----------------------------------------
+Converts a spacing unit multiple into
+the desired final units (currently rem)
+----------------------------------------
+*/
+/*
+----------------------------------------
+rem-to-px()
+----------------------------------------
+Converts a value in rem to a value in px
+----------------------------------------
+*/
+/*
+----------------------------------------
+rem-to-user-em()
+----------------------------------------
+Converts a value in rem to a value in
+[user-settings] em for use in media
+queries
+----------------------------------------
+*/
+/*
 Taken from USWDS 2.10.2 (https://designsystem.digital.gov/).
+*/
+/*
+----------------------------------------
+Spacing grid multiplier
+----------------------------------------
+*/
+/*
+----------------------------------------
+Spacing grid
+----------------------------------------
+*/
+/*
+----------------------------------------
+Breakpoints
+----------------------------------------
+*/
+/*
+----------------------------------------
+Colors
+----------------------------------------
 */
 /* General styles */
 body {
