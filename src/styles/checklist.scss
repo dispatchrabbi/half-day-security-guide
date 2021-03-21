@@ -8,5 +8,29 @@ body {
 }
 
 main {
+  max-width: 72rem;
   padding: 0 2em;
+
+  h2 {
+    padding-bottom: .25rem;
+    border-bottom: 1px solid $color-indigo-cool-70v;
+  }
+
+  h2 + ul {
+    column-count: 1;
+
+    @include at-media(tablet) {
+      column-count: 2;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-position: inside;
+    list-style-type: "▢ ";
+
+    li {
+      break-inside: avoid;
+    }
+  }
 }

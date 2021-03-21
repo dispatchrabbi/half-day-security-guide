@@ -135,3 +135,77 @@ variable that is, itself, a list
 
   @return $output;
 }
+
+/*
+----------------------------------------
+units()
+----------------------------------------
+Converts a spacing unit into
+the desired final units (currently rem)
+----------------------------------------
+*/
+
+@function units($value) {
+  $converted: if(
+    type-of($value) == "string",
+    quote($value),
+    number-to-token($value)
+  );
+
+  @if not map-has-key($project-spacing-standard, $converted) {
+    @return error-not-token($value, "spacing unit", $project-spacing-standard);
+  }
+
+  @return map-get($project-spacing-standard, $converted);
+}
+
+/*
+----------------------------------------
+spacing-multiple()
+----------------------------------------
+Converts a spacing unit multiple into
+the desired final units (currently rem)
+----------------------------------------
+*/
+
+@function spacing-multiple($unit) {
+  $grid-to-rem: ($system-spacing-grid-base * $unit) / $root-font-size-equiv *
+    1rem;
+
+  @return $grid-to-rem;
+}
+
+/*
+----------------------------------------
+rem-to-px()
+----------------------------------------
+Converts a value in rem to a value in px
+----------------------------------------
+*/
+
+@function rem-to-px($value-in-rem) {
+  @if unit($value-in-rem) == "rem" {
+    $rem-to-px: ($value-in-rem / 1rem) * $root-font-size-equiv;
+    @return $rem-to-px;
+  }
+  @if unit($value-in-rem) != "px" {
+    @error 'This value must be in either px or rem';
+  }
+  @return $value-in-rem;
+}
+
+/*
+----------------------------------------
+rem-to-user-em()
+----------------------------------------
+Converts a value in rem to a value in
+[user-settings] em for use in media
+queries
+----------------------------------------
+*/
+
+@function rem-to-user-em($grid-in-rem) {
+  $rem-to-user-em: ($grid-in-rem / 1rem) * 1em;
+
+  @return $rem-to-user-em;
+}
