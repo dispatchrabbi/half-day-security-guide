@@ -93,7 +93,7 @@ We strongly advise against password creation schemes, like using variations on t
 > Whatever your password strategy is, it's a good idea to make provisions for someone else being able to access your accounts in case of emergency or death. One option is to put important passwords and other account information in a physical lockbox or fire safe and give a friend or loved one a way to access its contents if necessary. Some password managers have features to allow emergency access to some or all of the passwords in your account.
 
 ## Get a password manager, and transition all your passwords onto it
-Sign up for a password manager, use it to store all your passwords, and make sure all your passwords are unique and randomly generated. We use and recommend 1Password, and we also trust BitWarden, LastPass, and KeePass. However, **do not use the password-saving functionality in your browser**, which doesn't work the same way a password manager does.
+Sign up for a password manager, use it to store all your passwords, and make sure all your passwords are unique and randomly generated. We use and recommend [1Password](https://1password.com/), and we also trust [BitWarden](https://bitwarden.com/), [LastPass](https://www.lastpass.com/), and [KeePass](https://keepass.info/). However, **do not use the password-saving functionality in your browser**, which doesn't work the same way a password manager does.
 
 A password manager stores all of your passwords behind a single main password, encrypted so that no one can access your passwords without your main password, even if they steal your laptop or hack the company that makes the password manager. Password managers also have built-in password generators, which make it easy to change your existing passwords to something long and random, or create a good, unique password to a new account.
 
@@ -203,7 +203,7 @@ What's the point of locking your computer down with passwords if someone can rem
 
   [^encrypt]: The OS's disk encryption is usually configured to use account login passwords, so there's no need to remember another password.
 
-# Phones and Tablets
+# Phones and tablets
 Now let's look at your Android or iOS mobile devices. If you're using a device with some other OS, the same principles apply, but the details may be different.
 
 ## Add a long lock screen passcode
@@ -322,7 +322,7 @@ Firefox is available on Windows, macOS, iOS, and Android (as well as others). In
 ## Install privacy-preserving extensions
 Here are a few extensions that we recommend you install to prevent tracking and preserve your privacy:
 - [Privacy Badger](https://privacybadger.org/) is a browser extension that blocks trackers. It is made by the [Electronic Frontier Foundation](https://www.eff.org/), an organization that champions digital privacy rights.
-- HTTPS Everywhere, also by the EFF, makes sure that, if possible, you are always visiting websites via secure HTTP (HTTPS), which prevents other devices on your network from seeing your traffic.
+- [HTTPS Everywhere](https://www.eff.org/https-everywhere), also by the EFF, makes sure that, if possible, you are always visiting websites via secure HTTP (HTTPS), which prevents other devices on your network from seeing your traffic.
 - [Facebook Container](https://addons.mozilla.org/en-US/firefox/addon/facebook-container/) isolates any Facebook activity in your browser (including Instagram) from the rest of your browsing so Facebook is less able to track you across the internet.
 - [ClearURLs](https://addons.mozilla.org/en-US/firefox/addon/clearurls/) removes tracking information and redirects from URLs you might copy or click on.
 
@@ -332,6 +332,8 @@ Optionally, if you have an iPhone, you can use [Firefox Focus](https://support.m
 
 ## Use DuckDuckGo
 Instead of using Google for your web searches, use [DuckDuckGo](https://duckduckgo.com/). Google collects your search history and uses it to power their advertising business, and they don't need any more of your data than they already have. DuckDuckGo doesn't collect any more information from you than they need to.
+
+You can switch your browser's default search engine in the browser settings.
 
 ## Type in sensitive websites instead of clicking links
 If you get a message from your bank or a retailer with a link to your account or an invoice, don't click the link — especially if the message was unexpected. Instead, open a new tab and navigate to the site yourself to log in.

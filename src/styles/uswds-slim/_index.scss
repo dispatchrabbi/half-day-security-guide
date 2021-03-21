@@ -1,0 +1,13 @@
+@import "first";
+@import "functions";
+@import "system-tokens";
+@import "at-media";
+
+$system-properties: (
+  breakpoints: (
+    standard: (
+      $system-breakpoints
+    ),
+    extended: ()
+  )
+)
