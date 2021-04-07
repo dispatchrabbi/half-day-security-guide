@@ -251,6 +251,11 @@ footer p {
   margin: 0;
 }
 
+main img.inline {
+  width: 256px;
+  margin-left: 1rem;
+  float: right;
+}
 main blockquote {
   padding: 1rem;
   border: 2px solid black;
