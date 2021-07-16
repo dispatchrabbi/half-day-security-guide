@@ -105,7 +105,9 @@ Some password managers will alert you if you have the same password for multiple
 > There are a few passwords you should memorize and maybe even keep out of your password manager. For example, you should always know the password to your main email address and the passwords to log in to your devices.
 
 ## Two-Factor Authentication (2FA)
-Two-factor authentication (sometimes called Multi-Factor Authentication, or MFA) provides an extra layer of security when you log in, and you should turn it on for every service that offers it.
+Two-factor authentication (sometimes called Multi-Factor Authentication, or MFA) provides an extra layer of security when you log in, and you should turn it on for every service that offers it. [^kalm-mfa]
+
+  [^kalm-mfa]: If you prefer to listen to audio explanations, Tom Merritt has a 9 minute podcast episode about Multi-Factor Authentication. [About Multi-Factor Authentication](https://dailytechnewsshow.com/2021/06/17/about-multi-factor-authentication/)
 
 Each factor in two-factor authentication is a different way to prove you're you. Typically, factors fall into three types: something you *know* (like a password or the answer to a security question), something you *have* (like a phone or a key), and something you *are* (like a fingerprint or a retina scan). By using more than one factor, it makes it harder for someone else to pretend to be you.
 
