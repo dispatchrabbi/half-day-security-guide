@@ -33,7 +33,13 @@ function findCurrentSection(htmlEl, mainEl) {
 
 function highlightNav(navEl, currentId) {
   navEl.querySelectorAll('.current').forEach(node => node.classList.remove('current'));
-  navEl.querySelector(`[href="#${currentId}"]`).closest('p, li').classList.add('current');
+  
+  const newCurrent = navEl.querySelector(`[href="#${currentId}"]`).closest('p, li');
+  newCurrent.classList.add('current');
+  
+  const navScroll = navEl.querySelector('#nav-scroll-container');
+  // scroll the nav panel so the highlight is close to 250px below the top of the screen
+  navScroll.scrollTop = newCurrent.offsetTop - 250;
 }
 
 function main() {
