@@ -31,15 +31,32 @@ function findCurrentSection(htmlEl, mainEl) {
   return targetEl.id;
 }
 
-function highlightNav(navEl, currentId) {
-  navEl.querySelectorAll('.current').forEach(node => node.classList.remove('current'));
+function findLIParent(node) {
+  const parent = node.parentNode;
   
-  const newCurrent = navEl.querySelector(`[href="#${currentId}"]`).closest('p, li');
-  newCurrent.classList.add('current');
+  if(parent.nodeName === "LI") {
+    return parent;
+  }
+  
+  return findLIParent(parent);
+}
+
+function highlightNav(navEl, currentId) {
+  // first remove any previously-selected highlights
+  navEl.querySelectorAll('.currentSection').forEach(node => node.classList.remove('currentSection'));
+  navEl.querySelectorAll('.currentGroup').forEach(node => node.classList.remove('currentGroup'));
+  
+  // find the current section's link in the toc
+  const sectionNode = navEl.querySelector(`[href="#${currentId}"]`).closest('p, li');
+  sectionNode.classList.add('currentSection');
+  
+  // find that section's group's li
+  let groupNode = findLIParent(sectionNode);
+  groupNode.classList.add('currentGroup');
   
   const navScroll = navEl.querySelector('#nav-scroll-container');
   // scroll the nav panel so the highlight is close to 250px below the top of the screen
-  navScroll.scrollTop = newCurrent.offsetTop - 250;
+  navScroll.scrollTop = sectionNode.offsetTop - 250;
 }
 
 function main() {

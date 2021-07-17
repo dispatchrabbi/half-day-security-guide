@@ -94,6 +94,12 @@ nav {
       font-weight: 400;
     }
 
+    li.currentGroup {
+      background-color: $color-blue-warm-5v;
+      color: $color-blue-warm-80v;
+      border-radius: .25rem;
+    }
+
     ul li {
       font-size: 0.8em;
     }
@@ -102,7 +108,7 @@ nav {
   li > p, li > ul > li {
     padding: .1rem .25rem;
 
-    &.current {
+    &.currentSection {
       background-color: $color-blue-warm-10v;
       color: $color-blue-warm-80v;
       border-radius: .25rem;
