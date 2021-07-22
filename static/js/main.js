@@ -1,10 +1,12 @@
 function findCurrentSection(htmlEl, mainEl) {
   const windowHeight = htmlEl.clientHeight;
 
-  // targetY is a position but windowHeight is a length, -1 to avoid fencepost error
-  // the footnotes are long enough that scrolling to the bottom would highlight the last section
-  // so I picked a point after the header that is a reasonable place for a reader to be looking at
-  // it's also sized such that a click on a section in the sidebar will result in that section being highlit
+  // Figure out which section we're in. We have to take into account both the size of the footnote section and
+  // the position of the page after clicking a link in the sidebar. So we:
+  // 1. Focus on the point 15% of the way down the window (a reasonable place for the reader to be looking at) and
+  // in the middle of the main section
+  
+  // targetY is a position but windowHeight is a length, so -1 to avoid a fencepost error
   const targetY = (windowHeight - 1) * .15;
   
   const targetX = (mainEl.offsetLeft + mainEl.scrollWidth) / 2;
@@ -19,7 +21,7 @@ function findCurrentSection(htmlEl, mainEl) {
     // caught in a margin, don't change the highlight
     return null;
   } else {
-    // above or below main; this is unlikely with non-dynamic scroll percent
+    // above main; just highlight the first possibility
     targetEl = mainEl.firstElementChild;
   }
 
