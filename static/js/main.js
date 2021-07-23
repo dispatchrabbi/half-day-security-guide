@@ -66,12 +66,17 @@ function main() {
   const navEl = document.getElementsByTagName('nav')[0];
   const mainEl = document.getElementsByTagName('main')[0];
 
-  window.onscroll = function() {
+  const onScroll = () => {
     const currentId = findCurrentSection(htmlEl, mainEl);
     if(currentId) {
       highlightNav(navEl, currentId);
     }
   }
+  
+  window.onscroll = onScroll;
+  
+  // also call the onScroll on page load to highlight the introduction
+  onScroll();
 }
 
 main();
