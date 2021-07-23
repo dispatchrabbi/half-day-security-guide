@@ -4,7 +4,7 @@
 
 $navBackground: $color-gray-cool-5;
 
-$subheadText: $color-gray-50;
+$subheadText: $color-gray-60;
 
 $tocSectionHighlight: $color-blue-warm-20v;
 $tocGroupHighlight: $color-blue-warm-10v;
@@ -17,7 +17,7 @@ $codeText: $color-magenta-50v;
 
 $footnoteRefHover: $color-gray-70;
 
-$footerBackground: $color-blue-10;
+$headerFooterBackground: $color-blue-10;
 
 /* General styles */
 
@@ -42,18 +42,25 @@ code {
 }
 
 /* Page layout */
+
 body {
   display: grid;
   grid-template:
     "title title"   auto
     "toc text"      auto
     "footer footer" auto / 1fr 3fr;
-  gap: 1.5em;
 }
 
 header {
   grid-area: title;
-  padding: 2em 2em 0 2em;
+  padding: 2em 2em 1.5em 2em;
+  background: $headerFooterBackground;
+
+  img {
+    height: 5rem;
+    float: left;
+    margin-right: 1.5em;
+  }
 
   h1 {
     font-weight: 600;
@@ -148,7 +155,7 @@ nav {
 main {
   grid-area: text;
   max-width: 48em;
-  padding: 0 2em 0 0;
+  padding: 1.5em 2em 0 1.5em;
 
   h1 {
     font-size: 2rem;
@@ -194,7 +201,7 @@ footer {
   grid-area: footer;
   padding: 2em;
 
-  background-color: $footerBackground;
+  background-color: $headerFooterBackground;
   font-size: 0.8rem;
 
   p {
