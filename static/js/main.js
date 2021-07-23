@@ -33,16 +33,6 @@ function findCurrentSection(htmlEl, mainEl) {
   return targetEl.id;
 }
 
-function findLIParent(node) {
-  const parent = node.parentNode;
-  
-  if(parent.nodeName === "LI") {
-    return parent;
-  }
-  
-  return findLIParent(parent);
-}
-
 function highlightNav(navEl, currentId) {
   // first remove any previously-selected highlights
   navEl.querySelectorAll('.currentSection').forEach(node => node.classList.remove('currentSection'));
@@ -53,7 +43,7 @@ function highlightNav(navEl, currentId) {
   sectionNode.classList.add('currentSection');
   
   // find that section's group's li
-  let groupNode = findLIParent(sectionNode);
+  const groupNode = sectionNode.parentNode.closest('li');
   groupNode.classList.add('currentGroup');
   
   const navScroll = navEl.querySelector('#nav-scroll-container');
