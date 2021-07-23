@@ -4,6 +4,21 @@
 
 $navBackground: $color-gray-cool-5;
 
+$subheadText: $color-gray-50;
+
+$tocSectionHighlight: $color-blue-warm-20v;
+$tocGroupHighlight: $color-blue-warm-10v;
+$tocHighlightText: $color-blue-warm-80v;
+
+$linkText: $color-indigo-cool-60v;
+$linkTextHover: $color-indigo-cool-70v;
+
+$codeText: $color-magenta-50v;
+
+$footnoteRefHover: $color-gray-70;
+
+$footerBackground: $color-blue-10;
+
 /* General styles */
 
 body {
@@ -14,16 +29,16 @@ body {
 }
 
 a {
-  color: $color-indigo-cool-60v;
+  color: $linkText;
   text-decoration: none;
   &:hover {
-    color: $color-indigo-cool-70v;
+    color: $linkTextHover;
     text-decoration: underline;
   }
 }
 
 code {
-  color: $color-magenta-50v;
+  color: $codeText;
 }
 
 /* Page layout */
@@ -46,7 +61,7 @@ header {
 
   h2 {
     font-size: 1.2em;
-    color: $color-gray-50;
+    color: $subheadText;
   }
 
   a {
@@ -96,10 +111,10 @@ nav {
       margin: 0;
       font-weight: 400;
     }
-
+    
     li.currentGroup {
-      background-color: $color-blue-warm-10v;
-      color: $color-blue-warm-80v;
+      background-color: $tocGroupHighlight;
+      color: $tocHighlightText;
       border-radius: .25rem;
     }
 
@@ -112,8 +127,8 @@ nav {
     padding: .1rem .25rem;
 
     &.currentSection {
-      background-color: $color-blue-warm-20v;
-      color: $color-blue-warm-80v;
+      background-color: $tocSectionHighlight;
+      color: $tocHighlightText;
       border-radius: .25rem;
     }
   }
@@ -147,7 +162,7 @@ main {
     padding: 3px;
 
     &:hover {
-      background: rgba($color-gray-70, 0.3);
+      background: rgba($footnoteRefHover, 0.3);
       border-radius: .25rem;
       text-decoration: none;
     }
@@ -173,7 +188,7 @@ footer {
   grid-area: footer;
   padding: 2em;
 
-  background-color: $color-blue-10;
+  background-color: $footerBackground;
   font-size: 0.8rem;
 
   p {
