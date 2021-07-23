@@ -15,9 +15,9 @@ $linkTextHover: $color-indigo-cool-70v;
 
 $codeText: $color-magenta-50v;
 
-$footnoteRefHover: $color-gray-70;
-
 $headerFooterBackground: $color-blue-10;
+
+$hoverHighlight: rgba($color-gray-70, 0.3);
 
 /* General styles */
 
@@ -130,11 +130,11 @@ nav {
     }
   }
 
-  li > p {
+  li > p > a {
     padding: .1rem .25rem .1rem .33rem;
   }
 
-  li > ul > li {
+  li > ul > li > a {
     padding: .1rem .25rem .1rem .66rem;
   }
 
@@ -151,6 +151,12 @@ nav {
     text-decoration: none;
     width: 100%;
     display: inline-block;
+        
+    &:hover {
+      background: $hoverHighlight;
+      border-radius: .25rem;
+      text-decoration: none;
+    }
   }
 }
 
@@ -177,7 +183,7 @@ main {
     padding: 3px;
 
     &:hover {
-      background: rgba($footnoteRefHover, 0.3);
+      background: $hoverHighlight;
       border-radius: .25rem;
       text-decoration: none;
     }
