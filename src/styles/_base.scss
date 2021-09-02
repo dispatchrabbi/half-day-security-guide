@@ -1,5 +1,24 @@
 @import "uswds-slim";
 
+/* Color variables */
+
+$navBackground: $color-gray-cool-5;
+
+$subheadText: $color-gray-60;
+
+$tocSectionHighlight: $color-blue-warm-20v;
+$tocGroupHighlight: $color-blue-warm-10v;
+$tocHighlightText: $color-blue-warm-80v;
+
+$linkText: $color-indigo-cool-60v;
+$linkTextHover: $color-indigo-cool-70v;
+
+$codeText: $color-magenta-50v;
+
+$headerFooterBackground: $color-blue-10;
+
+$hoverHighlight: rgba($color-gray-70, 0.3);
+
 /* General styles */
 
 body {
@@ -10,31 +29,38 @@ body {
 }
 
 a {
-  color: $color-indigo-cool-60v;
+  color: $linkText;
   text-decoration: none;
   &:hover {
-    color: $color-indigo-cool-70v;
+    color: $linkTextHover;
     text-decoration: underline;
   }
 }
 
 code {
-  color: $color-magenta-50v;
+  color: $codeText;
 }
 
 /* Page layout */
+
 body {
   display: grid;
   grid-template:
     "title title"   auto
     "toc text"      auto
     "footer footer" auto / 1fr 3fr;
-  gap: 1.5em;
 }
 
 header {
   grid-area: title;
-  padding: 2em 2em 0 2em;
+  padding: 2em 2em 1.5em 2em;
+  background: $headerFooterBackground;
+
+  img {
+    height: 5rem;
+    float: left;
+    margin-right: 1.5em;
+  }
 
   h1 {
     font-weight: 600;
@@ -42,7 +68,7 @@ header {
 
   h2 {
     font-size: 1.2em;
-    color: $color-gray-50;
+    color: $subheadText;
   }
 
   a {
@@ -55,13 +81,16 @@ header {
 
 nav {
   grid-area: toc;
-  padding: 0 0 0 1.75em;
+  padding: 0 .5em 0 .5em;
+  
+  background-color: $navBackground;
 
   > #nav-scroll-container {
     position: sticky;
     top: 0;
     height: 100vh;
     overflow-y: scroll;
+    scroll-behavior: smooth;
   }
 
   h1 {
@@ -70,7 +99,7 @@ nav {
     padding: .5em 0 .5em .25em;
     margin: 0;
 
-    background-color: white;
+    background-color: $navBackground;
     font-size: 1.2em;
     font-weight: 700;
     text-transform: lowercase;
@@ -78,7 +107,7 @@ nav {
   }
 
   > #nav-scroll-container > section > ul > li {
-    margin-bottom: 1em;
+    margin-bottom: .7em;
   }
 
   ul {
@@ -89,18 +118,30 @@ nav {
       margin: 0;
       font-weight: 400;
     }
+    
+    li.currentGroup {
+      background-color: $tocGroupHighlight;
+      color: $tocHighlightText;
+      border-radius: .25rem;
+    }
 
     ul li {
       font-size: 0.8em;
     }
   }
 
-  li > p, li > ul > li {
-    padding: .1rem .25rem;
+  li > p > a {
+    padding: .1rem .25rem .1rem .33rem;
+  }
 
-    &.current {
-      background-color: $color-blue-warm-10v;
-      color: $color-blue-warm-80v;
+  li > ul > li > a {
+    padding: .1rem .25rem .1rem .66rem;
+  }
+
+  li > p, li > ul > li {
+    &.currentSection {
+      background-color: $tocSectionHighlight;
+      color: $tocHighlightText;
       border-radius: .25rem;
     }
   }
@@ -108,13 +149,21 @@ nav {
   a {
     color: inherit;
     text-decoration: none;
+    width: 100%;
+    display: inline-block;
+        
+    &:hover {
+      background: $hoverHighlight;
+      border-radius: .25rem;
+      text-decoration: none;
+    }
   }
 }
 
 main {
   grid-area: text;
   max-width: 48em;
-  padding: 0 2em 0 0;
+  padding: 1.5em 2em 0 1.5em;
 
   h1 {
     font-size: 2rem;
@@ -134,7 +183,7 @@ main {
     padding: 3px;
 
     &:hover {
-      background: rgba($color-gray-70, 0.3);
+      background: $hoverHighlight;
       border-radius: .25rem;
       text-decoration: none;
     }
@@ -160,7 +209,7 @@ footer {
   grid-area: footer;
   padding: 2em;
 
-  background-color: $color-blue-10;
+  background-color: $headerFooterBackground;
   font-size: 0.8rem;
 
   p {
